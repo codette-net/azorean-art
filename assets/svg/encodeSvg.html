@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  textarea {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<body>
+
+  <!-- create form to get user input SVG  -->
+  <form action="" id="svgForm">
+    <textarea name="originalSvg" id="originalSvg"></textarea>
+    <button type="submit">Encode SVG</button>
+  </form>
+  <div class="resultSvg"></div>
+  <button id="copySvg">copy</button>
+
+  <script>
+    const form = document.getElementById('svgForm');
+    const resultSvg = document.querySelector('.resultSvg');
+    const copySvg = document.getElementById('copySvg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const originalSvg = document.getElementById('originalSvg').value;
+      const encodedSvg = encodeURIComponent(originalSvg);
+      resultSvg.innerHTML = `<textarea>${encodedSvg}</textarea>`;
+    });
+
+    copySvg.addEventListener('click', () => {
+      const textarea = document.querySelector('.resultSvg textarea');
+      textarea.select();
+      document.execCommand('copy');
+    });
+  </script>
+</body>
+</html>

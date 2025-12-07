@@ -1,0 +1,22 @@
+{
+  "name": "lozad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josvelema/azoreanart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josvelema/azoreanart/issues"
+  },
+  "homepage": "https://github.com/josvelema/azoreanart#readme",
+  "dependencies": {
+    "lozad": "^1.16.0"
+  }
+}

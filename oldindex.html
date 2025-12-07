@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <title>AzoreanArt test site</title>
+</head>
+
+<body style="overflow: auto">
+  <main>
+    <header>
+      <h1>AzoreanArt test site</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <section>
+      <h2>Welcome to the AzoreanArt test site</h2>
+      <p>This is a test site for the AzoreanArt project.</p>
+    </section>
+    <section class="panel artworks" id="home-gallery">
+      <div class="modal" tabIndex="-1">
+        <div class="inner"><img src="" /></div>
+      </div>
+      <div class="intro">
+        <h2 class="major">artworks</h2>
+        <p style="text-align: justify">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium saepe quaerat officiis!
+        </p>
+
+
+      </div>
+      <div class="artworks__body gradient-light-green-2">
+        <div class="artworks__list">
+          <div class="artwork"></div>
+
+        </div>
+
+        <div class="artworks__directions">
+          <button class="button icon circle i-arrow-left accent" id="artworks__prev"><
+          </button>
+          <button class="button icon circle i-arrow-right accent" id="artworks__next">>
+          </button>
+
+        </div>
+      </div>
+      
+    </section>
+    <footer>
+      <p>&copy; 2024 AzoreanArt</p>
+    </footer>
+  </main>
+</body>
+<!-- load lozad with custom options -->
+<script src="node_modules/lozad/dist/lozad.min.js"></script>
+
+
+<script src="gallery.js"></script>
+
+
+</html>
