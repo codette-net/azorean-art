@@ -10,7 +10,7 @@ sizes = [
 ]
 
 # Directory containing original images
-input_dir = 'img/newsel/'
+input_dir = 'resizeMe/'
 # Directory to save resized images
 output_dir = 'img/photos'
 
