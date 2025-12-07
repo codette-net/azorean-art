@@ -359,7 +359,7 @@ a.nav-logo:focus-visible {
   border-radius: 12px;
   box-shadow: var(--shadow-elevation-high);
   object-fit: cover;
-  object-position: 56%;
+  object-position: 36%;
 }
 
 .hero-footer {
