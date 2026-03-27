@@ -2,56 +2,101 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="assets/css/gallery.css"> -->
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-      content="Explore the unique artworks of Pieter Adriaans, inspired by the isolated island of São Jorge in the Azores. Purchase limited edition art directly from the artist.">
-    <meta name="keywords"
-      content="Azorean art, Pieter Adriaans, São Jorge, Azores, art gallery, buy art, Portuguese art, unique art, limited edition">
-    <meta name="author" content="Pieter Adriaans">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="rating" content="general">
-    <meta name="revisit-after" content="7 days">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Open Graph Meta Tags for social media sharing -->
-    <meta property="og:title" content="Azorean Art by Pieter Adriaans">
-    <meta property="og:description"
-      content="Discover unique artworks by Pieter Adriaans, inspired by the breathtaking landscapes of São Jorge in the Azores. Purchase limited pieces directly from the artist.">
-    <meta property="og:image" content="https://azorean-art.com/assets/img/photos/pieter_022-xl.jpg">
-    <meta property="og:url" content="https://azorean-art.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Azorean Art">
+  <title>Artwork by Pieter Adriaans | Azorean Art</title>
 
-    <!-- Other Meta Tags -->
-    <meta name="theme-color" content="#10203c;">
-    <meta name="msapplication-TileColor" content="#10203c;">
-    <!-- <meta name="msapplication-TileImage" content="https://azorean-art.com/assets/img/icons/icon-144x144.png"> -->
+  <meta name="description"
+    content="View original artwork by Pieter Adriaans on Azorean Art. Discover details, dimensions, year, medium and contact information for purchasing unique art from São Jorge, Azores.">
+  <meta name="keywords"
+    content="Pieter Adriaans artwork, Azorean Art, buy original art, São Jorge artist, Azores art, original painting, artwork details, Azorean artist">
+  <meta name="author" content="Pieter Adriaans">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#10203c">
 
-    <!-- Canonical link to avoid duplicate content -->
-    <link rel="canonical" href="https://azorean-art.com/">
+  <link rel="canonical" href="https://azorean-art.com/artwork.html">
 
-    <!-- Favicon -->
-    <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon.ico" type="image/x-icon">
-    <!-- icon 16 16 and 32 32 -->
-    <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Artwork by Pieter Adriaans | Azorean Art">
+  <meta property="og:description"
+    content="Discover original artwork by Pieter Adriaans, including artwork details, dimensions and purchase information.">
+  <meta property="og:image" content="https://azorean-art.com/assets/img/photos/pieter_022-xl.jpg">
+  <meta property="og:image:alt" content="Artwork by Pieter Adriaans">
+  <meta property="og:url" content="https://azorean-art.com/artwork.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Azorean Art">
+  <meta property="og:locale" content="en_US">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artwork by Pieter Adriaans | Azorean Art">
+  <meta name="twitter:description"
+    content="View original artwork by Pieter Adriaans and request more information directly through Azorean Art.">
+  <meta name="twitter:image" content="https://azorean-art.com/assets/img/photos/pieter_022-xl.jpg">
 
+  <!-- Favicon -->
+  <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-32x32.png" sizes="32x32" type="image/png">
 
-    <title>Azorean Art by Pieter Adriaans</title>
-  </head>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Schema: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Artwork by Pieter Adriaans",
+    "url": "https://azorean-art.com/artwork.html",
+    "description": "View original artwork by Pieter Adriaans on Azorean Art, including artwork details and purchase inquiry options.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Azorean Art",
+      "url": "https://azorean-art.com"
+    },
+    "about": {
+      "@type": "Person",
+      "name": "Pieter Adriaans",
+      "url": "https://pieter-adriaans.com"
+    }
+  }
+  </script>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://azorean-art.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Artwork",
+        "item": "https://azorean-art.com/artwork.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Dynamic artwork schema will be injected by JS -->
+  <script id="dynamic-artwork-schema" type="application/ld+json">
+  {}
+  </script>
+</head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 <body class="is-preload artwork-view">
@@ -67,25 +112,27 @@
 
 
     <div class="main-nav-wrapper">
-      <a href="index.html" class="nav-logo" aria-roledescription="Go to main page">Azorean<span
+      <a href="index.html" class="nav-logo" aria-label="Go to homepage">Azorean<span
           class="sr-only">Art</span><span>r</span><span>t</span></a>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-label="Go to homepage">Home</a></li>
 
-        <li><a href="index.html#art">Art</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#art" aria-label="Go to art section">Art</a></li>
+        <li><a href="joao-cagarro.html" aria-label="Go to João Cagarro page">João Cagarro</a></li>
+
+        <li><a href="index.html#faq" aria-label="Go to frequently asked questions">FAQ</a></li>
+        <li><a href="contact.html" aria-label="Go to contact page">Contact</a></li>
       </ul>
       <div class="nav-socials">
-        <a href="https://www.facebook.com/pieter.adriaans" class="nav-social" target="_blank"><svg
-            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        <a href="https://www.facebook.com/pieter.adriaans" class="nav-social" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
           </svg></a>
-        <a href="https://www.youtube.com/@pieter_adriaans" class="nav-social" target="_blank"><svg
-            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        <a href="https://www.youtube.com/@pieter_adriaans" class="nav-social" target="_blank" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -178,7 +225,8 @@
               <!-- accept phone number with numbers , () and - only -->
               <div class="field half">
                 <label for="phone">Phone</label>
-                <input type="text" name="phone" id="" placeholder="Enter your phone number" title="Please enter a valid phone number!">
+                <input type="text" name="phone" id="" placeholder="Enter your phone number"
+                  title="Please enter a valid phone number!">
               </div>
               <!-- address  -->
               <div class="field half">
@@ -210,7 +258,7 @@
               </div>
 
               <input type="hidden" name="artwork_id" id="artwork_id" value="">
-   
+
 
               <div class="field">
                 <label for="message">Message</label>
@@ -230,7 +278,8 @@
               </div>
               <div class="field half personal-details">
                 <p><strong><span>Adriaans & Van Kerchove, Lda.</strong></span></p>
-                <p><strong>Email:</strong><span><a href="mailto:pieter@pieter-adriaans.com">pieter@pieter-adriaans.com</a></span></p>
+                <p><strong>Email:</strong><span><a
+                      href="mailto:pieter@pieter-adriaans.com">pieter@pieter-adriaans.com</a></span></p>
                 <p><strong>Address:</strong><span> Caminho de Açougue 1, 9800-429 </span></p>
                 <p><strong>City/country:</strong><span> Urzelina, São Jorge, Açores</span></p>
                 <p><strong>Phone (NL) :</strong><span> +31 654234459 </span></p>
@@ -276,9 +325,12 @@
         <div class="footer-section links">
           <h4>More about us</h4>
           <ul>
-            <li><a href="https://pieter-adriaans.com">Pieter-Adriaans.com</a></li>
-            <li><a href="http://www.artrestaurantmanezinho.com">Art Restaurant Manezinho</a></li>
-            <li><a href="https://azoreanartcenter.com">Azorean Art Center</a></li>
+            <li><a href="https://pieter-adriaans.com" aria-label="Go to Pieter Adriaans website" target="_blank"
+                rel="noopener noreferrer">Pieter-Adriaans.com</a></li>
+            <li><a href="http://www.artrestaurantmanezinho.com" aria-label="Go to Art Restaurant Manezinho website"
+                target="_blank" rel="noopener noreferrer">Art Restaurant Manezinho</a></li>
+            <li><a href="https://azoreanartcenter.com" aria-label="Go to Azorean Art Center website" target="_blank"
+                rel="noopener noreferrer">Azorean Art Center</a></li>
           </ul>
         </div>
         <div class="footer-section contact">
@@ -300,6 +352,8 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2024 Pieter Adriaans. All rights reserved.</p>
+        <p>Publicity photographs on this website are by <a href="https://www.facebook.com/jorge.blayergois"
+            target="_blank" rel="noopener noreferrer">Jorge Blayer Gois</a>.</p>
       </div>
     </footer>
   </div>
@@ -368,28 +422,92 @@
     let artworkFactsheet = document.querySelector('.artwork-factsheet');
     let artworkId = document.querySelector('#artwork_id');
 
+    function updateMetaTag(selector, attr, value) {
+      const el = document.querySelector(selector);
+      if (el) {
+        el.setAttribute(attr, value);
+      }
+    }
 
+    function updateArtworkSEO(artwork) {
+      const artworkUrl = `https://azorean-art.com/artwork.html?id=${artwork.id}`;
+      const artworkImage = `https://pieter-adriaans.com/${artwork.filepath}`;
+      const title = `${artwork.title} | Pieter Adriaans | Azorean Art`;
+      const description = `${artwork.title}, an original ${artwork.art_type || 'artwork'} by Pieter Adriaans. ${artwork.year ? `Created in ${artwork.year}. ` : ''}${artwork.art_dimensions ? `Dimensions: ${artwork.art_dimensions}. ` : ''}View details and inquire directly through Azorean Art.`;
+
+      document.title = title;
+
+      updateMetaTag('meta[name="description"]', 'content', description);
+      updateMetaTag('meta[property="og:title"]', 'content', title);
+      updateMetaTag('meta[property="og:description"]', 'content', description);
+      updateMetaTag('meta[property="og:image"]', 'content', artworkImage);
+      updateMetaTag('meta[property="og:url"]', 'content', artworkUrl);
+      updateMetaTag('meta[name="twitter:title"]', 'content', title);
+      updateMetaTag('meta[name="twitter:description"]', 'content', description);
+      updateMetaTag('meta[name="twitter:image"]', 'content', artworkImage);
+
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', artworkUrl);
+      }
+
+      const artworkSchema = {
+        "@context": "https://schema.org",
+        "@type": "VisualArtwork",
+        "name": artwork.title,
+        "creator": {
+          "@type": "Person",
+          "name": "Pieter Adriaans",
+          "url": "https://pieter-adriaans.com"
+        },
+        "image": artworkImage,
+        "url": artworkUrl,
+        "description": artwork.description || `${artwork.title} by Pieter Adriaans.`,
+        "artform": artwork.art_type || "Artwork",
+        "width": artwork.art_dimensions || "",
+        "dateCreated": artwork.year ? String(artwork.year) : "",
+        "genre": "Azorean Art",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Azorean Art",
+          "url": "https://azorean-art.com"
+        }
+      };
+
+      const schemaEl = document.querySelector('#dynamic-artwork-schema');
+      if (schemaEl) {
+        schemaEl.textContent = JSON.stringify(artworkSchema, null, 2);
+      }
+    }
 
     function viewArtwork(data) {
       let artwork = data;
-      artworkImg.innerHTML = `<img src="https://pieter-adriaans.com/${artwork.filepath}" data-src="https://pieter-adriaans.com/${artwork.filepath}" class="lozad placeholder">`;
+
+      artworkImg.innerHTML = `<img src="https://pieter-adriaans.com/${artwork.filepath}" data-src="https://pieter-adriaans.com/${artwork.filepath}" class="lozad placeholder" alt="${artwork.title} by Pieter Adriaans">`;
       artworkTitle.textContent = artwork.title;
       artworkPrice.textContent = `€ ${artwork.art_price},-`;
       artworkYearFnrCat.innerHTML = `${artwork.year} | ${artwork.fnr} | ${artwork.id}`;
       artworkDescription.textContent = artwork.description;
       artworkDimensions.textContent = `Dimensions: ${artwork.art_dimensions}`;
       artworkType.textContent = `${artwork.art_type}`;
-      // add the artwork id to the hidden input field array
       artworkId.value = `[${artwork.year} | ${artwork.fnr} | ${artwork.id}]`;
-      // check if artwork has a factsheet_url
-      if (artwork.factsheet_url) {
-         //artworkFactsheet.innerHTML = `<a href="https://pieter-adriaans.com/${artwork.factsheet_url}" target="_blank">Download factsheet for this artwork (PDF)</a>`;
-         // create download link with font awesome pdf icon
-          artworkFactsheet.innerHTML = `<a href="https://pieter-adriaans.com/${artwork.factsheet_url}" target="_blank" title="Download factsheet for this artwork (PDF)"><i class="fas fa-file-pdf"></i>&nbsp;Download factsheet for this artwork (PDF)</a>`;
-          
-      }
-    }
 
+      if (artwork.factsheet_url) {
+        artworkFactsheet.innerHTML = `<a href="https://pieter-adriaans.com/${artwork.factsheet_url}" target="_blank" rel="noopener noreferrer" title="Download factsheet for this artwork (PDF)"><i class="fas fa-file-pdf"></i>&nbsp;Download factsheet for this artwork (PDF)</a>`;
+      } else {
+        artworkFactsheet.innerHTML = '';
+      }
+
+      updateArtworkSEO(artwork);
+
+      const observer = lozad('.lozad', {
+        loaded: function (el) {
+          el.dataset.loaded = true;
+        }
+      });
+      observer.observe();
+    }
 
 
 
