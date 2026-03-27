@@ -4,8 +4,7 @@ let responseWrapper = document.querySelector('.response-wrapper');
 let responseMsg = document.querySelector('.response-msg');
 let exitBtn = document.querySelector('#response-exit-btn');
 let errorsMsg = document.querySelector('.errors-msg');
-let whatNext = document.querySelector('.what-next');
-whatNext.style.display = 'none';
+
 
 let page = window.location.pathname.split('/').pop().split('.')[0];
 
@@ -15,18 +14,13 @@ exitBtn.addEventListener('click', () => {
   responseWrapper.style.display = 'none';
   if(page == 'contact') {
     window.location.href = '/';
-  } else {
-    whatNext.classList.add('active');
-  whatNext.scrollIntoView({behavior: 'smooth'});
-  }
+  } 
 });
 
 form.addEventListener('submit', async (event) => {
   console.log('submitting form');
   event.preventDefault();
-  if(page === 'artwork') {
-    whatNext.style.display = 'grid';
-  }
+  
   let formData = new FormData(event.target);
   try {
     const response = await fetch('contact.php', {
