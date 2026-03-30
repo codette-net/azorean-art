@@ -95,6 +95,19 @@
   <script id="dynamic-artwork-schema" type="application/ld+json">
   {}
   </script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CJ5XWV2ST5');
+  </script>
+  <!-- Google Analytics will only be loaded after consent -->
+  <script>
+    window.AZOREAN_ART_GA_ID = 'G-CJ5XWV2ST5';
+  </script>
+</head>
 </head>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -357,157 +370,256 @@
       </div>
     </footer>
   </div>
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__content">
+        <h2>Cookies & Analytics</h2>
+        <p>
+          We use analytics cookies to understand how visitors use this website and to improve the experience.
+          You can accept or reject analytics tracking.
+        </p>
+      </div>
 
-  <script src="node_modules/lozad/dist/lozad.min.js"></script>
-  <script src="assets/js/contact.js"></script>
+      <div class="cookie-banner__actions">
+        <button type="button" class="button accent" id="cookie-accept">Accept analytics</button>
+        <button type="button" class="button accent" id="cookie-reject">Reject</button>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__content">
+      <h2>Cookies & Analytics</h2>
+      <p>
+        We use analytics cookies to understand how visitors use this website and improve the experience.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="button primary" id="cookie-accept">Accept</button>
+      <button class="button secondary" id="cookie-reject">Reject</button>
+    </div>
+  </div>
+</div>
 
-  <script>
-    let mainNav = document.querySelector('.main-nav');
-    let navBtn = document.querySelector('#nav-btn');
-    let mainNavWrap = document.querySelector('.main-nav-wrapper');
-    navBtn.addEventListener('click', function () {
-      console.log('clicked');
-      mainNav.classList.toggle('active');
-      // if link is clicked, remove active class from mainNav
-      mainNavWrap.addEventListener('click', function () {
-        mainNav.classList.remove('active');
+<script>
+  (function () {
+    const STORAGE_KEY = 'azorean_art_cookie_consent';
+    const GA_ID = window.AZOREAN_ART_GA_ID;
+    const banner = document.getElementById('cookie-banner');
+
+    let gaLoaded = false;
+
+    function loadGA() {
+      if (gaLoaded) return;
+      gaLoaded = true;
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag('consent', 'default', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
       });
 
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        anonymize_ip: true
+      });
 
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(script);
+    }
+
+    function init() {
+      const consent = localStorage.getItem(STORAGE_KEY);
+
+      if (consent === 'accepted') {
+        loadGA();
+        return;
+      }
+
+      if (!consent) {
+        banner.hidden = false;
+      }
+    }
+
+    document.getElementById('cookie-accept').onclick = () => {
+      localStorage.setItem(STORAGE_KEY, 'accepted');
+      loadGA();
+      banner.hidden = true;
+    };
+
+    document.getElementById('cookie-reject').onclick = () => {
+      localStorage.setItem(STORAGE_KEY, 'rejected');
+      banner.hidden = true;
+    };
+
+    init();
+  })();
+</script>
+
+<script src="node_modules/lozad/dist/lozad.min.js"></script>
+<script src="assets/js/contact.js"></script>
+
+<script>
+  let mainNav = document.querySelector('.main-nav');
+  let navBtn = document.querySelector('#nav-btn');
+  let mainNavWrap = document.querySelector('.main-nav-wrapper');
+  navBtn.addEventListener('click', function () {
+    console.log('clicked');
+    mainNav.classList.toggle('active');
+    // if link is clicked, remove active class from mainNav
+    mainNavWrap.addEventListener('click', function () {
+      mainNav.classList.remove('active');
     });
-    // Play initial animations on page load
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.body.classList.remove("is-preload");
-      }, 100);
 
-      const observer = lozad('.lozad', {
-        loaded: function (el) {
-          el.dataset.loaded = true;
-        }
-      });
-      observer.observe();
+
+  });
+  // Play initial animations on page load
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.remove("is-preload");
+    }, 100);
+
+    const observer = lozad('.lozad', {
+      loaded: function (el) {
+        el.dataset.loaded = true;
+      }
     });
+    observer.observe();
+  });
 
 
+if (window.gtag) {
+  gtag('event', 'view_item', {
+    item_name: 'João Cagarro',
+    item_category: 'book'
+  });
+}
 
+  // check the current page
 
-    // check the current page
+  let path = window.location.pathname;
 
-    let path = window.location.pathname;
+  // check if id is present in the url
+  let id = window.location.search;
+  console.log(id);
+  // check if the id value is a number and if so fetch the artwork with that id
+  if (id) {
+    id = id.split('=')[1];
+    if (!isNaN(id)) {
+      fetch(`https://pieter-adriaans.com/pieterAPI.php?id=${id}`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          viewArtwork(data);
+        });
+    }
+  }
 
-    // check if id is present in the url
-    let id = window.location.search;
-    console.log(id);
-    // check if the id value is a number and if so fetch the artwork with that id
-    if (id) {
-      id = id.split('=')[1];
-      if (!isNaN(id)) {
-        fetch(`https://pieter-adriaans.com/pieterAPI.php?id=${id}`)
-          .then(response => response.json())
-          .then(data => {
-            console.log(data);
-            viewArtwork(data);
-          });
-      }
+  let artworkImg = document.querySelector('.artworks__current__img');
+  let artworkTitle = document.querySelector('.artwork__info h1');
+  let artworkPrice = document.querySelector('.artwork__info h2');
+  let artworkYearFnrCat = document.querySelector('.year-fnr-cat');
+  let artworkDescription = document.querySelector('.description');
+  let artworkDimensions = document.querySelector('.artwork-dimensions');
+  let artworkType = document.querySelector('.artwork-type');
+  let artworkFactsheet = document.querySelector('.artwork-factsheet');
+  let artworkId = document.querySelector('#artwork_id');
+
+  function updateMetaTag(selector, attr, value) {
+    const el = document.querySelector(selector);
+    if (el) {
+      el.setAttribute(attr, value);
+    }
+  }
+
+  function updateArtworkSEO(artwork) {
+    const artworkUrl = `https://azorean-art.com/artwork.html?id=${artwork.id}`;
+    const artworkImage = `https://pieter-adriaans.com/${artwork.filepath}`;
+    const title = `${artwork.title} | Pieter Adriaans | Azorean Art`;
+    const description = `${artwork.title}, an original ${artwork.art_type || 'artwork'} by Pieter Adriaans. ${artwork.year ? `Created in ${artwork.year}. ` : ''}${artwork.art_dimensions ? `Dimensions: ${artwork.art_dimensions}. ` : ''}View details and inquire directly through Azorean Art.`;
+
+    document.title = title;
+
+    updateMetaTag('meta[name="description"]', 'content', description);
+    updateMetaTag('meta[property="og:title"]', 'content', title);
+    updateMetaTag('meta[property="og:description"]', 'content', description);
+    updateMetaTag('meta[property="og:image"]', 'content', artworkImage);
+    updateMetaTag('meta[property="og:url"]', 'content', artworkUrl);
+    updateMetaTag('meta[name="twitter:title"]', 'content', title);
+    updateMetaTag('meta[name="twitter:description"]', 'content', description);
+    updateMetaTag('meta[name="twitter:image"]', 'content', artworkImage);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', artworkUrl);
     }
 
-    let artworkImg = document.querySelector('.artworks__current__img');
-    let artworkTitle = document.querySelector('.artwork__info h1');
-    let artworkPrice = document.querySelector('.artwork__info h2');
-    let artworkYearFnrCat = document.querySelector('.year-fnr-cat');
-    let artworkDescription = document.querySelector('.description');
-    let artworkDimensions = document.querySelector('.artwork-dimensions');
-    let artworkType = document.querySelector('.artwork-type');
-    let artworkFactsheet = document.querySelector('.artwork-factsheet');
-    let artworkId = document.querySelector('#artwork_id');
-
-    function updateMetaTag(selector, attr, value) {
-      const el = document.querySelector(selector);
-      if (el) {
-        el.setAttribute(attr, value);
+    const artworkSchema = {
+      "@context": "https://schema.org",
+      "@type": "VisualArtwork",
+      "name": artwork.title,
+      "creator": {
+        "@type": "Person",
+        "name": "Pieter Adriaans",
+        "url": "https://pieter-adriaans.com"
+      },
+      "image": artworkImage,
+      "url": artworkUrl,
+      "description": artwork.description || `${artwork.title} by Pieter Adriaans.`,
+      "artform": artwork.art_type || "Artwork",
+      "width": artwork.art_dimensions || "",
+      "dateCreated": artwork.year ? String(artwork.year) : "",
+      "genre": "Azorean Art",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Azorean Art",
+        "url": "https://azorean-art.com"
       }
+    };
+
+    const schemaEl = document.querySelector('#dynamic-artwork-schema');
+    if (schemaEl) {
+      schemaEl.textContent = JSON.stringify(artworkSchema, null, 2);
+    }
+  }
+
+  function viewArtwork(data) {
+    let artwork = data;
+
+    artworkImg.innerHTML = `<img src="https://pieter-adriaans.com/${artwork.filepath}" data-src="https://pieter-adriaans.com/${artwork.filepath}" class="lozad placeholder" alt="${artwork.title} by Pieter Adriaans">`;
+    artworkTitle.textContent = artwork.title;
+    artworkPrice.textContent = `€ ${artwork.art_price},-`;
+    artworkYearFnrCat.innerHTML = `${artwork.year} | ${artwork.fnr} | ${artwork.id}`;
+    artworkDescription.textContent = artwork.description;
+    artworkDimensions.textContent = `Dimensions: ${artwork.art_dimensions}`;
+    artworkType.textContent = `${artwork.art_type}`;
+    artworkId.value = `[${artwork.year} | ${artwork.fnr} | ${artwork.id}]`;
+
+    if (artwork.factsheet_url) {
+      artworkFactsheet.innerHTML = `<a href="https://pieter-adriaans.com/${artwork.factsheet_url}" target="_blank" rel="noopener noreferrer" title="Download factsheet for this artwork (PDF)"><i class="fas fa-file-pdf"></i>&nbsp;Download factsheet for this artwork (PDF)</a>`;
+    } else {
+      artworkFactsheet.innerHTML = '';
     }
 
-    function updateArtworkSEO(artwork) {
-      const artworkUrl = `https://azorean-art.com/artwork.html?id=${artwork.id}`;
-      const artworkImage = `https://pieter-adriaans.com/${artwork.filepath}`;
-      const title = `${artwork.title} | Pieter Adriaans | Azorean Art`;
-      const description = `${artwork.title}, an original ${artwork.art_type || 'artwork'} by Pieter Adriaans. ${artwork.year ? `Created in ${artwork.year}. ` : ''}${artwork.art_dimensions ? `Dimensions: ${artwork.art_dimensions}. ` : ''}View details and inquire directly through Azorean Art.`;
+    updateArtworkSEO(artwork);
 
-      document.title = title;
-
-      updateMetaTag('meta[name="description"]', 'content', description);
-      updateMetaTag('meta[property="og:title"]', 'content', title);
-      updateMetaTag('meta[property="og:description"]', 'content', description);
-      updateMetaTag('meta[property="og:image"]', 'content', artworkImage);
-      updateMetaTag('meta[property="og:url"]', 'content', artworkUrl);
-      updateMetaTag('meta[name="twitter:title"]', 'content', title);
-      updateMetaTag('meta[name="twitter:description"]', 'content', description);
-      updateMetaTag('meta[name="twitter:image"]', 'content', artworkImage);
-
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', artworkUrl);
+    const observer = lozad('.lozad', {
+      loaded: function (el) {
+        el.dataset.loaded = true;
       }
-
-      const artworkSchema = {
-        "@context": "https://schema.org",
-        "@type": "VisualArtwork",
-        "name": artwork.title,
-        "creator": {
-          "@type": "Person",
-          "name": "Pieter Adriaans",
-          "url": "https://pieter-adriaans.com"
-        },
-        "image": artworkImage,
-        "url": artworkUrl,
-        "description": artwork.description || `${artwork.title} by Pieter Adriaans.`,
-        "artform": artwork.art_type || "Artwork",
-        "width": artwork.art_dimensions || "",
-        "dateCreated": artwork.year ? String(artwork.year) : "",
-        "genre": "Azorean Art",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "Azorean Art",
-          "url": "https://azorean-art.com"
-        }
-      };
-
-      const schemaEl = document.querySelector('#dynamic-artwork-schema');
-      if (schemaEl) {
-        schemaEl.textContent = JSON.stringify(artworkSchema, null, 2);
-      }
-    }
-
-    function viewArtwork(data) {
-      let artwork = data;
-
-      artworkImg.innerHTML = `<img src="https://pieter-adriaans.com/${artwork.filepath}" data-src="https://pieter-adriaans.com/${artwork.filepath}" class="lozad placeholder" alt="${artwork.title} by Pieter Adriaans">`;
-      artworkTitle.textContent = artwork.title;
-      artworkPrice.textContent = `€ ${artwork.art_price},-`;
-      artworkYearFnrCat.innerHTML = `${artwork.year} | ${artwork.fnr} | ${artwork.id}`;
-      artworkDescription.textContent = artwork.description;
-      artworkDimensions.textContent = `Dimensions: ${artwork.art_dimensions}`;
-      artworkType.textContent = `${artwork.art_type}`;
-      artworkId.value = `[${artwork.year} | ${artwork.fnr} | ${artwork.id}]`;
-
-      if (artwork.factsheet_url) {
-        artworkFactsheet.innerHTML = `<a href="https://pieter-adriaans.com/${artwork.factsheet_url}" target="_blank" rel="noopener noreferrer" title="Download factsheet for this artwork (PDF)"><i class="fas fa-file-pdf"></i>&nbsp;Download factsheet for this artwork (PDF)</a>`;
-      } else {
-        artworkFactsheet.innerHTML = '';
-      }
-
-      updateArtworkSEO(artwork);
-
-      const observer = lozad('.lozad', {
-        loaded: function (el) {
-          el.dataset.loaded = true;
-        }
-      });
-      observer.observe();
-    }
+    });
+    observer.observe();
+  }
 
 
 
@@ -515,7 +627,7 @@
 
 
 
-  </script>
+</script>
 
 </body>
 

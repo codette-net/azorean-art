@@ -46,9 +46,20 @@
   <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-32x32.png" sizes="32x32" type="image/png">
 
-
-
   <title>Azorean Art by Pieter Adriaans</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ5XWV2ST5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CJ5XWV2ST5');
+</script>
+  <!-- Google Analytics will only be loaded after consent -->
+<script>
+  window.AZOREAN_ART_GA_ID = 'G-CJ5XWV2ST5';
+</script>
 </head>
 
 <body class="is-preload">
@@ -421,6 +432,9 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#art">Gallery</a></li>
+            <li>
+              <a href="#" onclick="openCookieSettings(); return false;">Cookie settings</a>
+            </li>
           </ul>
         </div>
         <div class="footer-section links">
@@ -432,6 +446,7 @@
                 Manezinho</a></li>
             <li><a href="https://azoreanartcenter.com" target="_blank" rel="noopener noreferrer">Azorean Art Center</a>
             </li>
+          
           </ul>
         </div>
         <div class="footer-section contact">
@@ -457,8 +472,101 @@
       </div>
     </footer>
   </div>
+
+  <div id="cookie-banner" class="cookie-banner" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__content">
+      <h2>Cookies & Analytics</h2>
+      <p>
+        We use analytics cookies to understand how visitors use this website and to improve the experience.
+        You can accept or reject analytics tracking.
+      </p>
+    </div>
+
+    <div class="cookie-banner__actions">
+      <button type="button" class="button accent" id="cookie-accept">Accept analytics</button>
+      <button type="button" class="button accent" id="cookie-reject">Reject</button>
+    </div>
+  </div>
+</div>
 </body>
-<!-- load lozad with custom options -->
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__content">
+      <h2>Cookies & Analytics</h2>
+      <p>
+        We use analytics cookies to understand how visitors use this website and improve the experience.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="button primary" id="cookie-accept">Accept</button>
+      <button class="button secondary" id="cookie-reject">Reject</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const STORAGE_KEY = 'azorean_art_cookie_consent';
+  const GA_ID = window.AZOREAN_ART_GA_ID;
+  const banner = document.getElementById('cookie-banner');
+
+  let gaLoaded = false;
+
+  function loadGA() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+
+    gtag('consent', 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    gtag('js', new Date());
+    gtag('config', GA_ID, {
+      anonymize_ip: true
+    });
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+  }
+
+  function init() {
+    const consent = localStorage.getItem(STORAGE_KEY);
+
+    if (consent === 'accepted') {
+      loadGA();
+      return;
+    }
+
+    if (!consent) {
+      banner.hidden = false;
+    }
+  }
+
+  document.getElementById('cookie-accept').onclick = () => {
+    localStorage.setItem(STORAGE_KEY, 'accepted');
+    loadGA();
+    banner.hidden = true;
+  };
+
+  document.getElementById('cookie-reject').onclick = () => {
+    localStorage.setItem(STORAGE_KEY, 'rejected');
+    banner.hidden = true;
+  };
+
+  init();
+})();
+</script>
 
 <script>
   let gallerySvg = document.querySelector('.art-gallery-svg');

@@ -1359,3 +1359,39 @@ body.artwork-view {
 .footer-bottom p {
   margin: 0;
 }
+
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 1rem;
+  background-color: hsl(var(--accent-1), var(--a-95));
+}
+
+.cookie-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.66rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-banner p {
+  padding-bottom: 1rem;
+}
+
+.cookie-banner h2 {
+  color: hsl(var(--accent-8));
+  margin: 0;
+}
+
+.cookie-banner__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cookie-banner[hidden] {
+  display: none !important;
+}

@@ -111,6 +111,18 @@
   </script>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CJ5XWV2ST5');
+  </script>
+  <!-- Google Analytics will only be loaded after consent -->
+  <script>
+    window.AZOREAN_ART_GA_ID = 'G-CJ5XWV2ST5';
+  </script>
+</head>
 </head>
 
 <body class="is-preload artwork-view">
@@ -376,39 +388,132 @@
       </div>
     </footer>
   </div>
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__content">
+        <h2>Cookies & Analytics</h2>
+        <p>
+          We use analytics cookies to understand how visitors use this website and to improve the experience.
+          You can accept or reject analytics tracking.
+        </p>
+      </div>
 
-  <script src="node_modules/lozad/dist/lozad.min.js"></script>
-  <script src="assets/js/contact.js"></script>
+      <div class="cookie-banner__actions">
+        <button type="button" class="button accent" id="cookie-accept">Accept analytics</button>
+        <button type="button" class="button accent" id="cookie-reject">Reject</button>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__content">
+      <h2>Cookies & Analytics</h2>
+      <p>
+        We use analytics cookies to understand how visitors use this website and improve the experience.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="button primary" id="cookie-accept">Accept</button>
+      <button class="button secondary" id="cookie-reject">Reject</button>
+    </div>
+  </div>
+</div>
 
-  <script>
-    const mainNav = document.querySelector('.main-nav');
-    const navBtn = document.querySelector('#nav-btn');
-    const mainNavWrap = document.querySelector('.main-nav-wrapper');
+<script>
+  (function () {
+    const STORAGE_KEY = 'azorean_art_cookie_consent';
+    const GA_ID = window.AZOREAN_ART_GA_ID;
+    const banner = document.getElementById('cookie-banner');
 
-    navBtn.addEventListener('click', function () {
-      mainNav.classList.toggle('active');
-    });
+    let gaLoaded = false;
 
-    mainNavWrap.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        mainNav.classList.remove('active');
+    function loadGA() {
+      if (gaLoaded) return;
+      gaLoaded = true;
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag('consent', 'default', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        anonymize_ip: true
+      });
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(script);
+    }
+
+    function init() {
+      const consent = localStorage.getItem(STORAGE_KEY);
+
+      if (consent === 'accepted') {
+        loadGA();
+        return;
+      }
+
+      if (!consent) {
+        banner.hidden = false;
+      }
+    }
+
+    document.getElementById('cookie-accept').onclick = () => {
+      localStorage.setItem(STORAGE_KEY, 'accepted');
+      loadGA();
+      banner.hidden = true;
+    };
+
+    document.getElementById('cookie-reject').onclick = () => {
+      localStorage.setItem(STORAGE_KEY, 'rejected');
+      banner.hidden = true;
+    };
+
+    init();
+  })();
+</script>
+<script src="node_modules/lozad/dist/lozad.min.js"></script>
+<script src="assets/js/contact.js"></script>
+
+<script>
+  const mainNav = document.querySelector('.main-nav');
+  const navBtn = document.querySelector('#nav-btn');
+  const mainNavWrap = document.querySelector('.main-nav-wrapper');
+
+  navBtn.addEventListener('click', function () {
+    mainNav.classList.toggle('active');
+  });
+
+  mainNavWrap.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      mainNav.classList.remove('active');
+    }
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.body.classList.remove('is-preload');
+    }, 100);
+
+    const observer = lozad('.lozad', {
+      loaded: function (el) {
+        el.dataset.loaded = true;
       }
     });
 
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.body.classList.remove('is-preload');
-      }, 100);
-
-      const observer = lozad('.lozad', {
-        loaded: function (el) {
-          el.dataset.loaded = true;
-        }
-      });
-
-      observer.observe();
-    });
-  </script>
+    observer.observe();
+  });
+</script>
 </body>
 
 </html>
