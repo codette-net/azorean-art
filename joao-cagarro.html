@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="alternate" hreflang="en" href="https://azorean-art.com/joao-cagarro.html">
+<link rel="alternate" hreflang="pt-PT" href="https://azorean-art.com/joao-cagarro-pt.html">
+<link rel="alternate" hreflang="x-default" href="https://azorean-art.com/joao-cagarro.html">
+
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -189,9 +193,14 @@
       <header class="main-header">
         <h1 class="h1-logo">Azorean<span class="sr-only">Art</span><span>r</span><span>t</span></h1>
       </header>
-
+       <div class="lang-switch">
+            <a href="joao-cagarro.html" class="lang-link active" aria-label="Switch to English version" title="Switch to English version">EN</a>
+            <span class="lang-separator">|</span>
+            <a href="joao-cagarro-pt.html" class="lang-link" aria-label="Mudar para a versão em português" title="Mudar para a versão em português">PT</a>
+          </div>
       <section class="hero-joao gradient-darkpurple-overlay">
         <header class="hero-content wrapper">
+   
           <p class="eyebrow">Illustrated Adventure from the Azores</p>
           <h1 class="product-title">João Cagarro and the Secret of Santa Bárbara</h1>
           <p class="product-subtitle">
@@ -200,7 +209,7 @@
           </p>
           <div class="hero-actions">
             <a href="#about-book" class="button primary">Discover the Story</a>
-            <a href="contact.html" class="button secondary">Ask About Availability</a>
+            <a href="#contact" class="button secondary">Ask About Availability</a>
           </div>
         </header>
 
@@ -253,6 +262,11 @@
                 <li><strong>Setting:</strong> São Jorge, Azores</li>
                 <li><strong>Languages:</strong> English / Portuguese</li>
               </ul>
+              <div class="info-price">
+                <p><strong>Price:</strong> <span>€14,-</span></p>
+                <small class="info-note">*excluding shipping costs, <a href="#contact">contact us</a> for more
+                  information.</small>
+              </div>
             </div>
           </aside>
         </div>
@@ -320,8 +334,7 @@
           </div>
         </div>
       </section>
-
-      <section class="section wrapper cta-section">
+      <div class="bg-img-divider joao-bg">
         <header class="cta-box">
           <p class="eyebrow">Azorean Art</p>
           <h2>Interested in João Cagarro?</h2>
@@ -330,11 +343,90 @@
             Adriaans’ work through the Azorean Art collection.
           </p>
           <div class="hero-actions">
-            <a href="contact.html" class="button primary">Contact Us</a>
+
             <a href="index.html#art" class="button secondary">View More Art</a>
           </div>
         </header>
-      </section>
+      </div>
+
+      <section class="section wrapper cta-section">
+
+        <section class="contact-page gradient-darkpurple-overlay" id="contact">
+          <form class="contact-form" action="" method="post" enctype="multipart/form-data">
+
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name <span class="form-required">* required</span></label>
+                <input type="text" id="first_name" name="first_name" placeholder="Enter your first name"
+                  title="First name must contain only characters!" required>
+
+              </div>
+              <div class="field half">
+                <label for="name">Lastname <span class="form-required">* required</span></label>
+
+                <input type="text" id="last_name" name="last_name" placeholder="Enter your last name"
+                  title="Last name must contain only characters!" required>
+              </div>
+
+              <div class="field half">
+                <label for="email">Email <span class="form-required">* required</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email"
+                  title="Please enter a valid email address!" required>
+
+              </div>
+              <!-- accept phone number with numbers , () and - only -->
+              <div class="field half">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="" placeholder="Enter your phone number"
+                  title="Please enter a valid phone number!">
+              </div>
+              <!-- address  -->
+              <div class="field half">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" placeholder="Enter your address (street,number)">
+              </div>
+              <!-- city -->
+              <div class="field half">
+                <label for="city">City (and state)</label>
+                <input type="text" name="city" id="city" placeholder="Enter your city/state">
+              </div>
+              <!-- postal code-->
+              <div class="field half">
+                <label for="postal_code">ZIP / Postal Code</label>
+                <input type="text" name="postal_code" id="postal_code" placeholder="Enter your postal code">
+              </div>
+              <!-- country -->
+              <div class="field half">
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" placeholder="Enter your country">
+              </div>
+              <!-- prefered contact method -->
+              <div class="field half">
+                <label for="contact_method">Prefered contact method</label>
+                <select name="contact_method" id="contact">
+                  <option value="mail">E-Mail</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"
+                  rows="4">I would like to reserve a copy of Joao Cagarro, the English version.</textarea>
+              </div>
+              <div class="field last-field">
+                <p class="errors-msg"></p>
+                <div class="g-recaptcha" data-sitekey="6LfUEvQpAAAAABZlIBzegXpvRMnnVGGwtCKaUMZ2"></div>
+
+                <div class="field">
+                  <ul class="actions">
+                    <li><input type="submit" value="Send Message" class="button primary" /></li>
+                    <li><input type="reset" value="Clear" class="clear-form" /></li>
+                  </ul>
+                </div>
+              </div>
+          </form>
+        </section>
     </main>
 
     <footer class="footer">
@@ -421,6 +513,8 @@
   </div>
 </div>
 
+<script src="assets/js/contact.js?v=2"></script>
+
 <script>
   (function () {
     const STORAGE_KEY = 'azorean_art_cookie_consent';
@@ -483,7 +577,6 @@
   })();
 </script>
 <script src="node_modules/lozad/dist/lozad.min.js"></script>
-<script src="assets/js/contact.js"></script>
 
 <script>
   const mainNav = document.querySelector('.main-nav');
