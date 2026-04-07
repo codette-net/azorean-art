@@ -1,0 +1,96 @@
+:root {
+  /* create a subtle gradient going from neutral 100 to primary 100 ,200 and 300 (4 steps) */
+  --gradient-neutral-primary: linear-gradient(
+    240deg,
+    hsl(60deg 25% 98%) 0%,
+    hsl(57deg 49% 98%) 1%,
+    hsl(55deg 70% 98%) 4%,
+    hsl(52deg 88% 98%) 10%,
+    hsl(50deg 99% 97%) 19%,
+    hsl(49deg 98% 96%) 31%,
+    hsl(48deg 98% 96%) 47%,
+    hsl(47deg 100% 95%) 65%,
+    hsl(45deg 98% 94%) 81%,
+    hsl(44deg 96% 94%) 92%,
+    hsl(44deg 95% 93%) 98%,
+    hsl(43deg 95% 92%) 100%
+  );
+
+  --gradient-neutral-primary-alpha: linear-gradient(
+    240deg,
+    hsla(60deg 25% 98%, 0.8) 0%,
+    hsla(57deg 49% 98%, 0.75) 1%,
+    hsla(55deg 70% 98%, 0.7) 4%,
+    hsla(52deg 88% 98%, 0.65) 10%,
+    hsla(50deg 99% 97%, 0.6) 19%,
+    hsla(49deg 98% 96%, 0.55) 31%,
+    hsla(48deg 98% 96%, 0.5) 47%,
+    hsla(47deg 100% 95%, 0.45) 65%,
+    hsla(45deg 98% 94%, 0.4) 81%,
+    hsla(44deg 96% 94%, 0.35) 92%,
+    hsla(44deg 95% 93%, 0.3) 98%,
+    hsla(43deg 95% 92%, 0.25) 100%
+  );
+
+  /* ruby: Hortensia */
+  --purple-1: #fff2fb;
+  --purple-2: #fce1f5;
+  --purple-3: #e9c3e2;
+  --purple-4: #b68db0;
+  --purple-5: #523b50;
+  --purple-6: #472b46;
+  --purple-7: #3b213c;
+  --purple-8: #2f1a31;
+  --purple-9: #231426;
+
+  --red-1: #fff6f2;
+  --red-2: #fed5ca;
+  --red-3: #f5aa9d;
+  --red-4: #dd756b;
+  --red-5: #ad3d39;
+  --red-6: #8c1e1e;
+  --red-7: #6a1010;
+  --red-8: #480a0a;
+  --red-9: #260505;
+
+  /* blue: Bleu De France */
+  --blue-1: #f2f5ff;
+  --blue-2: #c3d4ff;
+  --blue-3: #93b8fd;
+  --blue-4: #629ff7;
+  --blue-5: #3289ed;
+  --blue-6: #126bbb;
+  --blue-7: #05528a;
+  --blue-8: #013958;
+  --blue-9: #001b26;
+  /* Accent: Carrot Orange */
+  --accent-1: hsl(51, 100%, 97%);
+  --accent-2: hsl(45, 100%, 87%);
+  --accent-3: hsl(42, 95%, 76%);
+  --accent-4: hsl(39, 89%, 64%);
+  --accent-5: hsl(35, 82%, 51%);
+  --accent-6: hsl(32, 91%, 38%);
+  --accent-7: hsl(29, 100%, 26%);
+  --accent-8: hsl(24, 100%, 17%);
+  --accent-9: hsl(21, 100%, 7%);
+  --accent-15: hsl(56, 98%, 95%);
+  --accent-25: hsl(50, 100%, 87%);
+  --accent-35: hsl(48, 94%, 67%);
+  --accent-45: hsl(44, 86%, 60%);
+  --accent-55: hsl(40, 80%, 48%);
+  --accent-65: hsl(34, 88%, 35%);
+  --accent-75: hsl(29, 96%, 23%);
+  --accent-85: hsl(23, 98%, 15%);
+  --accent-95: hsl(20, 99%, 6%);
+
+  /* Neutral */
+  --neutral-1: #fcfafc;
+  --neutral-2: #ebe4e9;
+  --neutral-3: #d9cfd7;
+  --neutral-4: #c7bac5;
+  --neutral-5: #b5a7b4;
+  --neutral-6: #918591;
+  --neutral-7: #6d646e;
+  --neutral-8: #49434a;
+  --neutral-9: #262226;
+}
