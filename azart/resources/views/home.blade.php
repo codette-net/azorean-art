@@ -1,15 +1,25 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
  <div class="main-wrapper">
     <section class="hero gradient-darkpurple-overlay">
-      <img src="./assets/img/photos/Pieter_Adriaans_painting_in_garden-xl.jpg" class="hero-image"
+      {{-- <img src="./assets/img/photos/Pieter_Adriaans_painting_in_garden-xl.jpg" class="hero-image"
         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 992px) 992px, 1200px" data-srcset="
       ./assets/img/photos/Pieter_Adriaans_painting_in_garden-xl.jpg 1200w,
       ./assets/img/photos/Pieter_Adriaans_painting_in_garden-large.jpg 992w,
       ./assets/img/photos/Pieter_Adriaans_painting_in_garden-medium.jpg 768w,
       ./assets/img/photos/Pieter_Adriaans_painting_in_garden-small.jpg 480w
+    " alt="Artist Pieter Adriaans painting in his garden on São Jorge, Azores. Photo by Jorge Blayer Gois."> --}}
+      {{-- load from storage --}}
+      <img src="{{ asset('img/Pieter_Adriaans_painting_in_garden-xl.jpg') }}" class="hero-image"
+        sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 992px) 992px, 1200px" data-srcset="
+        {{ asset('img/Pieter_Adriaans_painting_in_garden-xl.jpg') }} 1200w,
+        {{ asset('img/Pieter_Adriaans_painting_in_garden-large.jpg') }} 992w,
+      {{ asset('img/Pieter_Adriaans_painting_in_garden-medium.jpg') }} 768w,
+      {{ asset('img/Pieter_Adriaans_painting_in_garden-small.jpg') }} 480w
     " alt="Artist Pieter Adriaans painting in his garden on São Jorge, Azores. Photo by Jorge Blayer Gois.">
+
+
 
       <img src="assets/svg/Adriaans_white.svg" alt="Adriaans signature" class="signature">
       <img src="assets/svg/Art_Gallery.svg" alt="Azorean Art gallery" class="art-gallery-svg">

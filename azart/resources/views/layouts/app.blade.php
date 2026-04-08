@@ -43,8 +43,10 @@
   <!-- icon 16 16 and 32 32 -->
   <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="https://azorean-art.com/assets/img/icons/favicon-32x32.png" sizes="32x32" type="image/png">
-
-  <title>Azorean Art by Pieter Adriaans</title>
+  <title>
+  @yield('title' , 'Azorean Art - Unique artworks by Pieter Adriaans inspired by the Azores')
+  </title>
+  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ5XWV2ST5"></script>
 <script>
