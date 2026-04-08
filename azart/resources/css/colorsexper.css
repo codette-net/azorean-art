@@ -1,0 +1,219 @@
+
+    /* Neutral */
+    --neutral-100: 60, 25%, 98%;
+    --neutral-200: 43, 16%, 92%;
+    --neutral-300: 36, 13%, 85%;
+    --neutral-400: 32, 12%, 78%;
+    --neutral-500: 32, 10%, 71%;
+    --neutral-600: 28, 6%, 57%;
+    --neutral-700: 30, 5%, 42%;
+    --neutral-800: 17, 5%, 28%;
+    --neutral-900: 30, 6%, 14%;
+
+    
+    
+        /* Primary: Hinoki */
+        --primary-100: 51, 100%, 97%;
+        --primary-200: 46, 100%, 95%;
+        --primary-300: 43, 95%, 92%;
+        --primary-400: 40, 86%, 89%;
+        --primary-500: 35, 75%, 84%;
+        --primary-600: 33, 36%, 62%;
+        --primary-700: 29, 27%, 44%;
+        --primary-800: 26, 29%, 27%;
+        --primary-900: 21, 29%, 12%;
+    
+        /* Accent: The Oregon Blue */
+        --accent-100: 226, 100%, 97%;
+        --accent-200: 225, 100%, 90%;
+        --accent-300: 222, 92%, 81%;
+        --accent-400: 218, 84%, 71%;
+        --accent-500: 215, 73%, 59%;
+        --accent-600: 211, 64%, 43%;
+        --accent-700: 208, 73%, 30%;
+        --accent-800: 204, 77%, 19%;
+        --accent-900: 200, 77%, 8%;
+    
+
+
+  /* Neutral */
+  /* --neutral-100: #fafcfa;
+  --neutral-200: #e7ede7;
+  --neutral-300: #d4ddd4;
+  --neutral-400: #c2cdc1;
+  --neutral-500: #b1bdaf;
+  --neutral-600: #8e978b;
+  --neutral-700: #6a7168;
+  --neutral-800: #474c45;
+  --neutral-900: #242622;
+   */
+
+  /* neutral alpha  */
+  --neutral-100-rgba: rgba(250, 252, 250, 0.8);
+  --neutral-200-rgba: rgba(231, 236, 231, 0.75);
+  --neutral-300-rgba: rgba(213, 219, 213, 0.7);
+  --neutral-400-rgba: rgba(195, 203, 195, 0.65);
+  --neutral-500-rgba: rgba(178, 186, 175, 0.6);
+  --neutral-600-rgba: rgba(141, 149, 140, 0.55);
+  --neutral-700-rgba: rgba(106, 113, 104, 0.5);
+  --neutral-800-rgba: rgba(71, 76, 69, 0.5);
+  --neutral-900-rgba: rgba(36, 38, 34, 0.48);
+
+  --neutral-50: #FEFEFC;
+  --neutral-100: #FCFCFA;
+  --neutral-150: #F9F9F7;
+  --neutral-200: #F7F6F3;
+  --neutral-250: #EEECE9;
+  --neutral-300: #DFDDD8;
+  --neutral-350: #D8D6D1;
+  --neutral-400: #D0CDC8;
+  --neutral-450: #C9C5C0;
+  --neutral-500: #C2BDB8;
+  --neutral-550: #BEBAB5;
+  --neutral-600: #9B9691;
+  --neutral-650: #8B8783;
+  --neutral-700: #746F6B;
+  --neutral-750: #5E5A57;
+  --neutral-800: #4D4946;
+  --neutral-850: #3D3A37;
+  --neutral-900: #262322;
+  --neutral-950: #1A1816;
+  --neutral-975: #0D0C0B;
+  
+
+  --gray-underline: rgba(
+    111,
+    111,
+    111,
+    0.45
+  ); /* Light gray for disabled elements or placeholders */
+
+
+    #fada5e;
+    #f4de9a;
+    #f4e79a;
+    #fcf0a7;
+    #fcf2ce;
+    #faefae;
+  
+    #5e7efa;
+    #4e0ef0;
+    #3a0f28;
+    --plum0: hsl(342.12deg 59.9% 22.31% / 81%);
+    --plum: hsla(341, 61%, 22%, 0.812);
+    --plum2: hsl(348deg 49.43% 35.1% / 80%);
+    #b11f23;
+    #ae3e3A;
+    #ab4b52;
+    #931f21;
+    #931f21;
+    #612227;
+    #b34a5e;
+  
+  
+    #ebede9;
+    #523b50;
+    #815d72;
+
+
+  /* ruby: Chocolate Kiss */
+  --ruby-1: #fff2f7;
+  --ruby-2: #fcc4db;
+  --ruby-3: #e68bb6;
+  --ruby-4: #ac4a7e;
+  --ruby-5: #3b0f29;
+  --ruby-6: #360825;
+  --ruby-7: #342300;
+  --ruby-8: #2b0322;
+  --ruby-9: #260220;
+
+    /* Primary: Muffin Mix */
+    --primary-100: #FFFBF2;
+    --primary-200: #FFF8EC;
+    --primary-300: #FEF3E4;
+    --primary-400: #FBEBDB;
+    --primary-500: #F5E1D0;
+    --primary-600: #C1A28E;
+    --primary-700: #8E6F60;
+    --primary-800: #5A433B;
+    --primary-900: #261C19;
+
+    /* Accent: Zürich Blue */
+    --accent-100: #F2F6FF;
+    --accent-200: #BED5FE;
+    --accent-300: #89B8FB;
+    --accent-400: #529DF0;
+    --accent-500: #1F83DB;
+    --accent-600: #0A6BAE;
+    --accent-700: #025481;
+    --accent-800: #003B54;
+    --accent-900: #001D26;
+
+    /* Neutral */
+    --neutral-100: #FCFCFA;
+    --neutral-200: #EEECE9;
+    --neutral-300: #DFDDD8;
+    --neutral-400: #D0CDC8;
+    --neutral-500: #C2BDB8;
+    --neutral-600: #9B9691;
+    --neutral-700: #746F6B;
+    --neutral-800: #4D4946;
+    --neutral-900: #262322;
+    
+
+    /* Neutral */
+    --neutral-50: #FEFEFC;
+    --neutral-100: #FCFCFA;
+    --neutral-150: #F9F9F7;
+    --neutral-200: #F7F6F3;
+    --neutral-250: #EEECE9;
+    --neutral-300: #DFDDD8;
+    --neutral-350: #D8D6D1;
+    --neutral-400: #D0CDC8;
+    --neutral-450: #C9C5C0;
+    --neutral-500: #C2BDB8;
+    --neutral-550: #BEBAB5;
+    --neutral-600: #9B9691;
+    --neutral-650: #8B8783;
+    --neutral-700: #746F6B;
+    --neutral-750: #5E5A57;
+    --neutral-800: #4D4946;
+    --neutral-850: #3D3A37;
+    --neutral-900: #262322;
+    --neutral-950: #1A1816;
+    --neutral-975: #0D0C0B;
+    
+    
+    /* Primary: Eye Of Newt */
+    --primary-100: #FFF6F2;
+    --primary-200: #FED5CA;
+    --primary-300: #F5AA9D;
+    --primary-400: #DD756B;
+    --primary-500: #AD3D39;
+    --primary-600: #8C1E1E;
+    --primary-700: #6A1010;
+    --primary-800: #480A0A;
+    --primary-900: #260505;
+
+    /* Accent: Warm Blue */
+    --accent-100: #F6F2FF;
+    --accent-200: #D5CAFF;
+    --accent-300: #AD9FFB;
+    --accent-400: #7F74F2;
+    --accent-500: #4D48E0;
+    --accent-600: #2428B2;
+    --accent-700: #131C83;
+    --accent-800: #0A1555;
+    --accent-900: #050B26;
+
+    /* Neutral */
+    --neutral-100: #FCFBFA;
+    --neutral-200: #EDEAE9;
+    --neutral-300: #DED9D8;
+    --neutral-400: #CFC8C8;
+    --neutral-500: #BFB8B8;
+    --neutral-600: #999191;
+    --neutral-700: #736B6B;
+    --neutral-800: #4D4646;
+    --neutral-900: #262222;
+    

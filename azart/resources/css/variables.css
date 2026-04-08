@@ -1,0 +1,312 @@
+/* set sora font */
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* thin  */
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/fonts/ttf/Sora-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* set public sans font  */
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+:root {
+  /* ruby: Hortensia */
+  --purple-1: hsl(308, 95%, 96%);
+  --purple-2: hsl(295, 70%, 92%);
+  --purple-3: hsl(280, 38%, 78%);
+  --purple-4: hsl(270, 23%, 58%);
+  --purple-5: hsl(260, 22%, 46%);
+  --purple-6: hsl(250, 25%, 35%);
+  --purple-7: hsl(242, 29%, 28%);
+  --purple-8: hsl(236, 30%, 21%);
+  --purple-9: hsl(230, 30%, 12%);
+  --purple-11: rgb(74, 67, 112);
+
+  /* create blurple-1 to 9 with this as the middle tone/5  : hsl(219, 57%, 23%) */
+  --blurple-1: hsl(219, 59%, 75%);
+  --blurple-2: hsl(219, 57%, 65%);
+  --blurple-3: hsl(219, 57%, 55%);
+  --blurple-4: hsl(219, 57%, 45%);
+  --blurple-5: hsl(219, 57%, 35%);
+  --blurple-6: hsl(219, 57%, 25%);
+  --blurple-7: hsl(219, 57%, 20%);
+  --blurple-8: hsl(219, 57%, 15%);
+  --blurple-9: hsl(219, 57%, 10%);
+  --blurple-11: rgb(27, 53, 100);
+
+  /* complementing blurple opposite of spectrum */
+  --orange-1: hsl(39, 100%, 95%);
+  --orange-2: hsl(39, 100%, 85%);
+  --orange-3: hsl(39, 100%, 75%);
+  --orange-4: hsl(39, 100%, 65%);
+  --orange-5: hsl(39, 100%, 55%);
+  --orange-6: hsl(39, 100%, 45%);
+  --orange-7: hsl(39, 100%, 35%);
+  --orange-8: hsl(39, 100%, 25%);
+  --orange-9: hsl(39, 100%, 15%);
+
+
+  --icon-svg: #ff0000;
+
+  /* eye of newt */
+  --red-1: #fff6f2;
+  --red-2: #fed5ca;
+  --red-3: #f5aa9d;
+  --red-4: #dd756b;
+  --red-5: #ad3d39;
+  --red-6: #8c1e1e;
+  --red-7: #6a1010;
+  --red-8: #480a0a;
+  --red-9: #260505;
+  /* blue: Bleu De France */
+  --blue-1: #f2f5ff;
+  --blue-2: #c3d4ff;
+  --blue-3: #93b8fd;
+  --blue-4: #629ff7;
+  --blue-5: #3289ed;
+  --blue-6: #126bbb;
+  --blue-7: #05528a;
+  --blue-8: #013958;
+  --blue-9: #001b26;
+  /* Accent: Carrot Orange */
+  --accent-1: 39, 100%, 97%;
+  --accent-2: 39, 100%, 87%;
+  --accent-3: 39, 95%, 76%;
+  --accent-4: 39, 89%, 64%;
+  --accent-5: 39, 82%, 51%;
+  --accent-6: 32, 91%, 38%;
+  --accent-7: 29, 100%, 26%;
+  --accent-8: 24, 100%, 17%;
+  --accent-9: 21, 100%, 7%;
+  --accent-15: 56, 98%, 95%;
+  --accent-25: 50, 100%, 87%;
+  --accent-35: 48, 94%, 67%;
+  --accent-45: 44, 86%, 60%;
+  --accent-55: 40, 80%, 48%;
+  --accent-65: 34, 88%, 35%;
+  --accent-75: 29, 96%, 23%;
+  --accent-85: 23, 98%, 15%;
+  --accent-95: 20, 100%, 6%;
+
+  /* Neutral */
+  /* --neutral-1: 252, 250, 252;
+  --neutral-2: 235, 228, 233;
+  --neutral-3: 217, 207, 215;
+  --neutral-4: 199, 186, 197;
+  --neutral-5: 181, 167, 180;
+  --neutral-6: 145, 133, 145;
+  --neutral-7: 109, 100, 110;
+  --neutral-8: 73, 67, 74;
+  --neutral-9: 38, 34, 38; */
+  --neutral-1: 250, 251, 252;
+--neutral-2: 235, 236, 238;
+--neutral-3: 220, 222, 224;
+--neutral-4: 205, 207, 210;
+--neutral-5: 190, 193, 196;
+--neutral-6: 149, 154, 157;
+--neutral-7: 110, 114, 117;
+--neutral-8: 71, 76, 78;
+--neutral-9: 34, 37, 38;
+
+  /* alpha values for hsl colors */
+  --a-95: 0.96;
+  --a-9: 0.9;
+  --a-85: 0.86;
+  --a-8: 0.8;
+  --a-75: 0.76;
+  --a-7: 0.7;
+  --a-65: 0.66;
+  --a-6: 0.6;
+  --a-55: 0.56;
+  --a-5: 0.5;
+  --a-45: 0.45;
+  --a-4: 0.4;
+  --a-35: 0.35;
+  --a-3: 0.3;
+  --a-25: 0.25;
+  --a-2: 0.2;
+
+  /* Typography */
+  --font-family: "Source Sans Pro", Helvetica, sans-serif;
+  --font-size: 1rem;
+  --font-weight: 300;
+  --line-height: 1.65;
+  --letter-spacing: -0.05em;
+
+  --pb: 1.5rem 1rem;
+  --pin: 1.5rem;
+
+  /* --shadow-color: 300 10 25; */
+  --shadow-color: 219 57 10;
+  --shadow-elevation-low: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.59),
+    0.5px 0.7px 0.8px -2px hsl(var(--shadow-color) / 0.44),
+    1.4px 1.9px 2.1px -4.1px hsl(var(--shadow-color) / 0.29);
+  --shadow-elevation-medium: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.61),
+    0.8px 1.1px 1.2px -1.3px hsl(var(--shadow-color) / 0.5),
+    2.6px 3.5px 3.9px -2.7px hsl(var(--shadow-color) / 0.38),
+    7.2px 9.7px 10.8px -4.1px hsl(var(--shadow-color) / 0.26);
+  --shadow-elevation-high: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.51),
+    1px 1.3px 1.5px -0.5px hsl(var(--shadow-color) / 0.46),
+    1.9px 2.6px 2.9px -1px hsl(var(--shadow-color) / 0.42),
+    3.5px 4.7px 5.2px -1.5px hsl(var(--shadow-color) / 0.38),
+    6.2px 8.4px 9.3px -2px hsl(var(--shadow-color) / 0.33),
+    /* 10.4px 14.1px 14.6px -2.5px hsl(var(--shadow-color) / 0.29), */ 16.6px
+      22.5px 20px -3px hsl(var(--shadow-color) / 0.25),
+    25.2px 34.2px 27.9px -3.5px hsl(var(--shadow-color) / 0.21);
+  /* 36.6px 49.6px 31px -4.1px hsl(var(--shadow-color) / 0.17); */
+
+  /* subtle single dropshadow */
+  --shadow-elevation-subtle: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.61),
+    0.8px 1.1px 1.2px -1.3px hsl(var(--shadow-color) / 0.5),
+    2.6px 3.5px 3.9px -2.7px hsl(var(--shadow-color) / 0.38),
+    7.2px 9.7px 10.8px -4.1px hsl(var(--shadow-color) / 0.26);
+
+  /* 1 line dropshadow with rgba  */
+
+  --nav-height: 4.375rem;
+  --artwork-card-width: 250px;
+  --panel-medium-width: min(100%, 50rem);
+
+  --gradient-napels: linear-gradient(
+    50deg,
+    hsl(45deg 100% 87%) 0%,
+    hsl(45deg 100% 88%) 8%,
+    hsl(47deg 100% 89%) 17%,
+    hsl(48deg 100% 91%) 27%,
+    hsl(49deg 100% 92%) 37%,
+    hsl(48deg 100% 93%) 47%,
+    hsl(50deg 100% 94%) 57%,
+    hsl(50deg 100% 95%) 66%,
+    hsl(50deg 100% 96%) 74%,
+    hsl(43deg 100% 97%) 81%,
+    hsl(35deg 86% 97%) 87%,
+    hsl(22deg 85% 97%) 91%,
+    hsl(7deg 67% 98%) 94%,
+    hsl(351deg 64% 98%) 97%,
+    hsl(336deg 45% 98%) 98%,
+    hsl(330deg 40% 98%) 100%,
+    hsl(320deg 33% 98%) 100%,
+    hsl(300deg 25% 98%) 100%
+  );
+
+  /* dark gradient no whites with variables from bluple and neutral */
+  --gradient-dark-blurple: url(../img/overlay.png),linear-gradient(
+    50deg,
+    var(--blurple-9) 25%,
+    var(--blurple-8) 45%,
+    var(--blurple-7) 65%,
+    var(--blurple-6) 80%,
+    var(--blurple-5) 95%
+  );
+}

@@ -1,9 +1,3 @@
-fotoJorge
-assets/img
-assets/selectie
-node_modules
-config.php
-zoldstuf
 *.log
 .DS_Store
 .env
