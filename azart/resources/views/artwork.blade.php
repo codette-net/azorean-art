@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @yield('title', 'Artwork')
 
 @section('content')
@@ -214,4 +215,8 @@
       </div>
     </footer>
   </div>
+  
 @endsection
+
+@vite(['resources/js/artwork.js'])
+

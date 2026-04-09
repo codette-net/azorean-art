@@ -322,3 +322,5 @@
     
     @endsection
   </div>
+
+  @vite(['resources/js/galleryHome.js'])

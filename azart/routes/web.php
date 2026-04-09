@@ -6,8 +6,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/artwork/{id}', function ($id) {
-    return view('artwork', ['id' => $id]);
+Route::get('/artwork/{art_id}', function ($art_id) {
+    return view('artwork', ['art_id' => $art_id]);
 })->name('artwork');
 
 Route::get('/contact', function () {
