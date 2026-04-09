@@ -1,7 +1,7 @@
 body {
   background-color: rgba(var(--neutral-9));
   background-image: var(--gradient-dark-blurple);
-  /* background-image: url(../img/overlay.png);
+  /* background-image: url(..assets/img/overlay.png);
   background-size: 128px 128px; */
   color: rgb(var(--neutral-9));
   font-family: "Public Sans", Arial, Helvetica, sans-serif;
@@ -102,7 +102,7 @@ strong {
   width: min(25%, 562px);
 
   bottom: 0;
-} 
+}
 
 @media screen and (max-width: 768px) {
   .art-gallery-svg {
@@ -265,7 +265,7 @@ header.main-header {
   color: hsl(var(--accent-1));
   text-decoration: none;
   transition: all 230ms ease-in-out;
-  
+
 }
 
 .main-nav a:hover,
@@ -624,7 +624,7 @@ img {
 
 .gradient-purple-overlay {
   background-color: hsl(260, 20%, 48%);
-  background-image: url(../img/overlay.png),
+  background-image: url(assets/img/overlay.png),
     linear-gradient(
       135deg,
       rgba(27, 53, 100, 0.25) 25%,
@@ -638,7 +638,7 @@ img {
   /* background-color:  hsl(236, 31%, 30%); */
   background-color: var(--blurple-6);
 
-  background-image: url(../img/overlay.png),
+  background-image: url('/assets/img/overlay.png'),
     linear-gradient(
       160deg,
       rgba(27, 53, 100, 0.25) 25%,
@@ -701,7 +701,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 @media screen and (max-width: 600px) {
@@ -710,24 +710,24 @@ img {
   background-attachment: scroll;
 
   }
-  
+
 }
 
 
 
 .bg-img-1 {
-  background-image: url("../img/photos/pieter_010-xl.jpg");
+  background-image: url('/photos/pieter_010-xl.jpg');
 }
 .bg-img-2 {
-  background-image: url("../img/photos/pieter_013-xl.jpg");
+  background-image: url('/photos/pieter_013-xl.jpg');
 }
 .bg-img-3 {
-  background-image: url("../img/photos/pieter_019-xl.jpg");
+  background-image: url('/photos/pieter_019-xl.jpg');
 }
 
 .bg-img-15 {
     background-color: var(--blurple-6);
-    background-image: url("../img/photos/Style\ sheet\ Joao\ Cagarro-xl.png");
+    background-image: url('/photos/Style\ sheet\ Joao\ Cagarro-xl.png');
     background-position: 40% 33%;
     background-size: 90%;
 }
@@ -775,7 +775,7 @@ img {
   outline-color: hsl(var(--accent-4));
 }
 
-  
+
 
 
 
@@ -1052,7 +1052,7 @@ body.artwork-view {
   gap: 1rem;
   padding: 1rem;
   background-color: rgba(var(--neutral-1), var(--a-95));
-  
+
   border-radius: 4px;
   box-shadow: var(--shadow-elevation-medium);
 }
@@ -1148,7 +1148,7 @@ body.artwork-view {
 
 .joao-bg {
   background-color: transparent;
-  background-image:  url("../img/photos/Style\ sheet\ Joao\ Cagarro-xl.png");
+  background-image:  url("photos/Style\ sheet\ Joao\ Cagarro-xl.png");
   background-position: 40% 33%;
   background-size: 66%;
 color: rgb(var(--neutral-1));
@@ -1169,12 +1169,12 @@ text-shadow: 1px 1px 2px rgba(11, 11, 11, 0.85);
 
 #joao-cagarro  strong ,
 #joao-cagarro-home strong ,
-#joao-cagarro .rj-box h3, 
+#joao-cagarro .rj-box h3,
 #joao-cagarro-home h2 ,
 #joao-cagarro .feature-card h3,
 #joao-cagarro .audience-card h3 {
   color: hsl(var(--accent-8));
-  
+
 }
 
 #joao-cagarro-home img {

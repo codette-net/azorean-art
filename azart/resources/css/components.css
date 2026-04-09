@@ -1528,28 +1528,28 @@ address {
 
 
 .i-arrow-right {
-  background: url("../svg/chevron-right.svg") no-repeat center;
+  background: url("../../assets/svg/chevron-right.svg") no-repeat center;
 }
 
 .i-arrow-left {
-  background: url("../svg/chevron-left.svg") no-repeat center;
+  background: url("../../assets/svg/chevron-left.svg") no-repeat center;
 }
 
 .i-arrow-down {
-  background: url("../svg/arrowdown.svg") no-repeat center;
+  background: url("../../assets/svg/arrowdown.svg") no-repeat center;
 
 }
 
 .i-arrow-up {
-  background: url("../svg/arrowup.svg") no-repeat center;
+  background: url("../../assets/svg/arrowup.svg") no-repeat center;
 }
 
 .i-like {
-  background: url("../svg/likeheart.svg") no-repeat center;
+  background: url("../../assets/svg/likeheart.svg") no-repeat center;
 }
 
 .i-info {
-  background: url("../svg/info-circle.svg") no-repeat center;
+  background: url("../../assets/svg/info-circle.svg") no-repeat center;
 
 }
 

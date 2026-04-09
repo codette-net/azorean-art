@@ -3,20 +3,20 @@
 @section('content')
  <div class="main-wrapper">
     <section class="hero gradient-darkpurple-overlay">
-      {{-- <img src="./assets/img/photos/Pieter_Adriaans_painting_in_garden-xl.jpg" class="hero-image"
+      {{-- <img src="{{ asset('photos/Pieter_Adriaans_painting_in_garden-xl.jpg" class}}="hero-image"
         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 992px) 992px, 1200px" data-srcset="
-      ./assets/img/photos/Pieter_Adriaans_painting_in_garden-xl.jpg 1200w,
-      ./assets/img/photos/Pieter_Adriaans_painting_in_garden-large.jpg 992w,
-      ./assets/img/photos/Pieter_Adriaans_painting_in_garden-medium.jpg 768w,
-      ./assets/img/photos/Pieter_Adriaans_painting_in_garden-small.jpg 480w
-    " alt="Artist Pieter Adriaans painting in his garden on São Jorge, Azores. Photo by Jorge Blayer Gois."> --}}
+      {{ asset('photos/Pieter_Adriaans_painting_in_garden-xl.jpg 1200w,
+      {{}} asset('photos/Pieter_Adriaans_painting_in_garden-large.jpg 992w,
+      {{}} asset('photos/Pieter_Adriaans_painting_in_garden-medium.jpg 768w,
+      {{}} asset('photos/Pieter_Adriaans_painting_in_garden-small.jpg 480w
+    "}} alt="Artist Pieter Adriaans painting in his garden on São Jorge, Azores. Photo by Jorge Blayer Gois."> --}}
       {{-- load from storage --}}
-      <img src="{{ asset('img/Pieter_Adriaans_painting_in_garden-xl.jpg') }}" class="hero-image"
+      <img src="{{ asset('photos/Pieter_Adriaans_painting_in_garden-xl.jpg') }}" class="hero-image"
         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 992px) 992px, 1200px" data-srcset="
-        {{ asset('img/Pieter_Adriaans_painting_in_garden-xl.jpg') }} 1200w,
-        {{ asset('img/Pieter_Adriaans_painting_in_garden-large.jpg') }} 992w,
-      {{ asset('img/Pieter_Adriaans_painting_in_garden-medium.jpg') }} 768w,
-      {{ asset('img/Pieter_Adriaans_painting_in_garden-small.jpg') }} 480w
+        {{ asset('photos/Pieter_Adriaans_painting_in_garden-xl.jpg') }} 1200w,
+        {{ asset('photos/Pieter_Adriaans_painting_in_garden-large.jpg') }} 992w,
+      {{ asset('photos/Pieter_Adriaans_painting_in_garden-medium.jpg') }} 768w,
+      {{ asset('photos/Pieter_Adriaans_painting_in_garden-small.jpg') }} 480w
     " alt="Artist Pieter Adriaans painting in his garden on São Jorge, Azores. Photo by Jorge Blayer Gois.">
 
 
@@ -76,10 +76,10 @@
             Flemish settlers, shipwrecks and long-buried secrets.
           </p>
 
-          <img src="./assets/img/photos/Cagarro Logo 2025-xl.png" srcset="
-        ./assets/img/photos/Cagarro Logo 2025-xl.png 1200w,
-        ./assets/img/photos/Cagarro Logo 2025-lg.png 800w,
-        ./assets/img/photos/Cagarro Logo 2025-md.png 400w
+          <img src="{{ asset('photos/Cagarro Logo 2025-xl.png') }}" srcset="
+        {{ asset('photos/Cagarro Logo 2025-xl.png')}} 1200w,
+        {{ asset('photos/Cagarro Logo 2025-lg.png')}} 800w,
+        {{ asset('photos/Cagarro Logo 2025-md.png')}} 400w
       " sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 1200px"
             alt="João Cagarro and Maria walking the trails of São Jorge in the Azores, artwork by Pieter Adriaans">
 
@@ -292,13 +292,11 @@
             creations are unique, with each piece reflecting his profound connection to the isolated island he calls
             home.
           </p>
-          <img src=".assets/img/photos/pieter_039-xl.jpg" srcset="./assets/img/photos/pieter_039-xl.jpg 1200w" srcset=""
-            sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 992px) 992px, 1200px" data-srcset="
-      ./assets/img/photos/pieter_039-xl.jpg 1200w,
-      ./assets/img/photos/pieter_039-large.jpg 992w,
-      ./assets/img/photos/pieter_039-medium.jpg 768w,
-      ./assets/img/photos/pieter_039-small.jpg 480w
-      " alt="Artist Pieter Adriaans painting outside on São Jorge, Azores. Photo by Jorge Blayer Gois.">
+          <img src="{{ asset('photos/pieter_039-xl.jpg') }}" srcset="
+        {{ asset('photos/pieter_039-xl.jpg')}} 1200w,
+        {{ asset('photos/pieter_039-xl.jpg')}} 800w,
+        {{ asset('photos/pieter_039-xl.jpg')}} 400w
+      " sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 1200px" alt="Artist Pieter Adriaans painting outside on São Jorge, Azores. Photo by Jorge Blayer Gois.">
           <p>
             Pieter Adriaans values the personal nature of art transactions, viewing them as intimate exchanges between
             individuals. As such, his artworks are not available through any galleries or other channels. The only way
@@ -320,59 +318,7 @@
 
 
     </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <!-- <div class="footer-section about">
-            <h4>About Us</h4>
-            <p>
-              Pieter Adriaans is an artist whose works are deeply personal and unique. Discover more about his creative journey and art by exploring this website or visiting his studio in São Jorge, Azores.
-            </p>
-          </div> -->
-        <div class="footer-section links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#art">Gallery</a></li>
-            <li>
-              <a href="#" onclick="openCookieSettings(); return false;">Cookie settings</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-section links">
-          <h4>More about us</h4>
-          <ul>
-            <li><a href="https://pieter-adriaans.com" target="_blank" rel="noopener noreferrer">Pieter-Adriaans.com</a>
-            </li>
-            <li><a href="http://www.artrestaurantmanezinho.com" target="_blank" rel="noopener noreferrer">Art Restaurant
-                Manezinho</a></li>
-            <li><a href="https://azoreanartcenter.com" target="_blank" rel="noopener noreferrer">Azorean Art Center</a>
-            </li>
-          
-          </ul>
-        </div>
-        <div class="footer-section contact">
-          <h4>Contact Us</h4>
-          <p><strong>Adriaans & Van Kerchove, Lda.</strong></p>
-          <p>Email: <a href="mailto:pieter@pieter-adriaans.com">pieter@pieter-adriaans.com</a></p>
-          <p>Address: Caminho de Açougue 1, 9800-429 Urzelina, São Jorge, Açores</p>
-          <p>Phone: +31 654234459 </p>
-          <p> +351 964 643 610 </p>
-
-          <div class="social-media">
-            <a href="https://www.facebook.com/pieter.adriaans" aria-label="Facebook Pieter Adriaans" target="_blank"
-              rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-            <!-- youtube.com/pieter.adriaans -->
-            <a href="https://www.youtube.com/@pieter_adriaans" aria-label="Youtube Pieter Adriaans" target="_blank"
-              rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Pieter Adriaans. All rights reserved.</p>
-        <p>Publicity photographs on this website are by <a href="https://www.facebook.com/jorge.blayergois" target="_blank" rel="noopener noreferrer">Jorge Blayer Gois</a>.</p>
-      </div>
-    </footer>
+    
+    
+    @endsection
   </div>
-
-  @endsection

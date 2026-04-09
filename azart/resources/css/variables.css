@@ -1,42 +1,42 @@
 /* set sora font */
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-Regular.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-Bold.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-ExtraBold.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-ExtraBold.ttf");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-SemiBold.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-Light.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-Light.ttf");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-ExtraLight.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-ExtraLight.ttf");
   font-weight: 200;
   font-style: normal;
 }
@@ -44,7 +44,7 @@
 /* thin  */
 @font-face {
   font-family: "Sora";
-  src: url("../fonts/fonts/ttf/Sora-Thin.ttf");
+  src: url("/assets/fonts/fonts/ttf/Sora-Thin.ttf");
   font-weight: 100;
   font-style: normal;
 }
@@ -52,70 +52,70 @@
 /* set public sans font  */
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Regular.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-ExtraLight.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-ExtraLight.ttf");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Light.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-Light.ttf");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-SemiBold.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-SemiBoldItalic.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-SemiBoldItalic.ttf");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Bold.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-ExtraBold.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-ExtraBold.ttf");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-Italic.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-Italic.ttf");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-BoldItalic.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-BoldItalic.ttf");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/public-sans-v1.003/webfonts/PublicSans-ExtraBoldItalic.ttf");
+  src: url("/assets/fonts/public-sans-v1.003/webfonts/PublicSans-ExtraBoldItalic.ttf");
   font-weight: 800;
   font-style: italic;
 }
@@ -301,12 +301,12 @@
   );
 
   /* dark gradient no whites with variables from bluple and neutral */
-  --gradient-dark-blurple: url(../img/overlay.png),linear-gradient(
-    50deg,
-    var(--blurple-9) 25%,
-    var(--blurple-8) 45%,
-    var(--blurple-7) 65%,
-    var(--blurple-6) 80%,
-    var(--blurple-5) 95%
-  );
+  /*--gradient-dark-blurple: url(/assets/img/overlay.png),linear-gradient(*/
+  /*  50deg,*/
+  /*  var(--blurple-9) 25%,*/
+  /*  var(--blurple-8) 45%,*/
+  /*  var(--blurple-7) 65%,*/
+  /*  var(--blurple-6) 80%,*/
+  /*  var(--blurple-5) 95%*/
+  /*);*/
 }

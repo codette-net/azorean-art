@@ -110,6 +110,59 @@
     </div>
   </nav>
   @yield('content')
+  <footer class="footer">
+      <div class="footer-content">
+        <!-- <div class="footer-section about">
+            <h4>About Us</h4>
+            <p>
+              Pieter Adriaans is an artist whose works are deeply personal and unique. Discover more about his creative journey and art by exploring this website or visiting his studio in São Jorge, Azores.
+            </p>
+          </div> -->
+        <div class="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#art">Gallery</a></li>
+            <li>
+              <a href="#" onclick="openCookieSettings(); return false;">Cookie settings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section links">
+          <h4>More about us</h4>
+          <ul>
+            <li><a href="https://pieter-adriaans.com" target="_blank" rel="noopener noreferrer">Pieter-Adriaans.com</a>
+            </li>
+            <li><a href="http://www.artrestaurantmanezinho.com" target="_blank" rel="noopener noreferrer">Art Restaurant
+                Manezinho</a></li>
+            <li><a href="https://azoreanartcenter.com" target="_blank" rel="noopener noreferrer">Azorean Art Center</a>
+            </li>
+          
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h4>Contact Us</h4>
+          <p><strong>Adriaans & Van Kerchove, Lda.</strong></p>
+          <p>Email: <a href="mailto:pieter@pieter-adriaans.com">pieter@pieter-adriaans.com</a></p>
+          <p>Address: Caminho de Açougue 1, 9800-429 Urzelina, São Jorge, Açores</p>
+          <p>Phone: +31 654234459 </p>
+          <p> +351 964 643 610 </p>
+
+          <div class="social-media">
+            <a href="https://www.facebook.com/pieter.adriaans" aria-label="Facebook Pieter Adriaans" target="_blank"
+              rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <!-- youtube.com/pieter.adriaans -->
+            <a href="https://www.youtube.com/@pieter_adriaans" aria-label="Youtube Pieter Adriaans" target="_blank"
+              rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pieter Adriaans. All rights reserved.</p>
+        <p>Publicity photographs on this website are by <a href="https://www.facebook.com/jorge.blayergois" target="_blank" rel="noopener noreferrer">Jorge Blayer Gois</a>.</p>
+      </div>
+    </footer>
   <div id="cookie-banner" class="cookie-banner" hidden>
   <div class="cookie-banner__inner">
     <div class="cookie-banner__content">
@@ -127,21 +180,6 @@
   </div>
 </div>
 </body>
-<!-- Cookie Banner -->
-<div id="cookie-banner" class="cookie-banner" hidden>
-  <div class="cookie-banner__inner">
-    <div class="cookie-banner__content">
-      <h2>Cookies & Analytics</h2>
-      <p>
-        We use analytics cookies to understand how visitors use this website and improve the experience.
-      </p>
-    </div>
-    <div class="cookie-banner__actions">
-      <button class="button primary" id="cookie-accept">Accept</button>
-      <button class="button secondary" id="cookie-reject">Reject</button>
-    </div>
-  </div>
-</div>
 
 <script>
 (function () {
