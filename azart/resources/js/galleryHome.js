@@ -4,22 +4,15 @@ import lozad from "lozad";
 console.log("lozad loaded:", typeof lozad !== "undefined");
 // cookies and GA
 
-// Play initial animations on page load
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.body.classList.remove("is-preload");
-    }, 100);
+getCategories();
 
-    getCategories();
-
-    const observer = lozad(".lozad", {
-        loaded: function (el) {
-            el.dataset.loaded = true;
-        },
-    });
-    observer.observe();
-    scrollToHash();
+const observer = lozad(".lozad", {
+    loaded: function (el) {
+        el.dataset.loaded = true;
+    },
 });
+observer.observe();
+scrollToHash();
 
 let gallerySvg = document.querySelector(".art-gallery-svg");
 gallerySvg.addEventListener("click", function () {

@@ -1,4 +1,11 @@
 console.log("main js loaded");
+// Play initial animations on page load
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.body.classList.remove("is-preload");
+    }, 100);
+});
+
 
 // Navigation functionality - runs immediately
 let mainNav = document.querySelector(".main-nav");
