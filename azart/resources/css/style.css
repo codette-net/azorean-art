@@ -196,10 +196,11 @@ header.main-header {
 }
 
 .main-nav.active {
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) !important;  
+
 }
 
-.main-nav-wrapper {
+.main-nav-wrapper { 
   position: relative;
   display: grid;
   gap: 1rem;
@@ -900,7 +901,7 @@ img {
 }
 
 .artwork::after {
-  content: url("../svg/arrowup.svg");
+  content: url("assets/svg/arrowup.svg");
   display: block;
   width: 1rem;
   height: auto;

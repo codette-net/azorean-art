@@ -301,12 +301,12 @@
   );
 
   /* dark gradient no whites with variables from bluple and neutral */
-  /*--gradient-dark-blurple: url(/assets/img/overlay.png),linear-gradient(*/
-  /*  50deg,*/
-  /*  var(--blurple-9) 25%,*/
-  /*  var(--blurple-8) 45%,*/
-  /*  var(--blurple-7) 65%,*/
-  /*  var(--blurple-6) 80%,*/
-  /*  var(--blurple-5) 95%*/
-  /*);*/
+  --gradient-dark-blurple: url(/assets/img/overlay.png),linear-gradient(
+    50deg,
+    var(--blurple-9) 25%,
+    var(--blurple-8) 45%,
+    var(--blurple-7) 65%,
+    var(--blurple-6) 80%,
+    var(--blurple-5) 95%
+  );
 }

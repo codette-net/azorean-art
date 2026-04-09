@@ -71,13 +71,13 @@
       <a href="index.html" class="nav-logo" aria-label="Go to homepage">Azorean<span
           class="sr-only">Art</span><span>r</span><span>t</span></a>
       <ul>
-        <li><a href="index.html" aria-label="Go to homepage">Home</a></li>
+        <li><a href="{{ route('home') }}" aria-label="Go to homepage">Home</a></li>
 
-        <li><a href="#art" aria-label="View art gallery">Art</a></li>
-        <li><a href="joao-cagarro.html" aria-label="View João Cagarro's work">João Cagarro</a></li>
+        <li><a href="/#art" aria-label="View art gallery">Art</a></li>
+        <li><a href="{{ route('joao-cagarro') }}" aria-label="View João Cagarro's work">João Cagarro</a></li>
 
-        <li><a href="#faq" aria-label="View frequently asked questions">FAQ</a></li>
-        <li><a href="contact.html" aria-label="Contact the artist">Contact</a></li>
+        <li><a href="/#faq" aria-label="View frequently asked questions">FAQ</a></li>
+        <li><a href="{{ route('contact') }}" aria-label="Contact the artist">Contact</a></li>
       </ul>
       <div class="nav-socials">
         <a href="https://www.facebook.com/pieter.adriaans" class="nav-social" target="_blank" aria-label="Follow on Facebook"><svg
@@ -181,67 +181,7 @@
 </div>
 </body>
 
-<script>
-(function () {
-  const STORAGE_KEY = 'azorean_art_cookie_consent';
-  const GA_ID = window.AZOREAN_ART_GA_ID;
-  const banner = document.getElementById('cookie-banner');
 
-  let gaLoaded = false;
-
-  function loadGA() {
-    if (gaLoaded) return;
-    gaLoaded = true;
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    window.gtag = gtag;
-
-    gtag('consent', 'default', {
-      analytics_storage: 'granted',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
-
-    gtag('js', new Date());
-    gtag('config', GA_ID, {
-      anonymize_ip: true
-    });
-
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(script);
-  }
-
-  function init() {
-    const consent = localStorage.getItem(STORAGE_KEY);
-
-    if (consent === 'accepted') {
-      loadGA();
-      return;
-    }
-
-    if (!consent) {
-      banner.hidden = false;
-    }
-  }
-
-  document.getElementById('cookie-accept').onclick = () => {
-    localStorage.setItem(STORAGE_KEY, 'accepted');
-    loadGA();
-    banner.hidden = true;
-  };
-
-  document.getElementById('cookie-reject').onclick = () => {
-    localStorage.setItem(STORAGE_KEY, 'rejected');
-    banner.hidden = true;
-  };
-
-  init();
-})();
-</script>
 
 <script>
   let gallerySvg = document.querySelector('.art-gallery-svg');
@@ -249,20 +189,6 @@
     document.querySelector('#art').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-
-  let mainNav = document.querySelector('.main-nav');
-  let navBtn = document.querySelector('#nav-btn');
-  let mainNavWrap = document.querySelector('.main-nav-wrapper');
-  navBtn.addEventListener('click', function () {
-    console.log('clicked');
-    mainNav.classList.toggle('active');
-    // if link is clicked, remove active class from mainNav
-    mainNavWrap.addEventListener('click', function () {
-      mainNav.classList.remove('active');
-    });
-
-
-  });
 
 
 
