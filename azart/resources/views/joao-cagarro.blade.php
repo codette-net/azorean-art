@@ -28,9 +28,9 @@
           </div>
         </header>
 
-        <img src="./assets/img/photos/JC & M Walking the trails-xl.png" srcset="./assets/img/photos/JC & M Walking the trails-xl.png 1200w,
-                  ./assets/img/photos/JC & M Walking the trails-lg.png 800w,
-                  ./assets/img/photos/JC & M Walking the trails-md.png 400w"
+        <img src="{{ asset('photos/JC & M Walking the trails-xl.png') }}" srcset="{{ asset('photos/JC & M Walking the trails-xl.png') }} 1200w,
+                  {{ asset('photos/JC & M Walking the trails-lg.png') }} 800w,
+                  {{ asset('photos/JC & M Walking the trails-md.png') }} 400w"
           sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 1200px"
           alt="João Cagarro and Maria walking the trails of São Jorge in the Azores, artwork by Pieter Adriaans"
           class="lozad" data-loaded="false">
@@ -86,9 +86,9 @@
               </div>
           </aside>
           <div class="book-cover">
-            <img src="./assets/img/photos/Joao-Cagarro-Cover-xl.png" srcset="./assets/img/photos/Joao-Cagarro-Cover-xl.png 1200w,
-                      ./assets/img/photos/Joao-Cagarro-Cover-lg.png 800w,
-                      ./assets/img/photos/Joao-Cagarro-Cover-md.png 400w"
+            <img src="{{ asset('photos/Joao-Cagarro-Cover-xl.jpg') }}" srcset="{{ asset('photos/Joao-Cagarro-Cover-xl.jpg') }} 1200w,
+                      {{ asset('photos/Joao-Cagarro-Cover-lg.jpg') }} 800w,
+                      {{ asset('photos/Joao-Cagarro-Cover-md.jpg') }} 400w"
               sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 1200px"
               alt="Cover of João Cagarro and the Secret of Santa Bárbara, an illustrated book by Pieter Adriaans set in the Azores"
               class="lozad" data-loaded="false">
@@ -253,87 +253,5 @@
         </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html#faq">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="index.html#art">Gallery</a></li>
-          </ul>
-        </div>
 
-        <div class="footer-section links">
-          <h4>More about us</h4>
-          <ul>
-            <li><a href="https://pieter-adriaans.com" target="_blank" rel="noopener noreferrer">Pieter-Adriaans.com</a>
-            </li>
-            <li><a href="http://www.artrestaurantmanezinho.com" target="_blank" rel="noopener noreferrer">Art Restaurant
-                Manezinho</a></li>
-            <li><a href="https://azoreanartcenter.com" target="_blank" rel="noopener noreferrer">Azorean Art Center</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-section contact">
-          <h4>Contact Us</h4>
-          <p><strong>Adriaans & Van Kerchove, Lda.</strong></p>
-          <p>Email: <a href="mailto:pieter@pieter-adriaans.com">pieter@pieter-adriaans.com</a></p>
-          <p>Address: Caminho de Açougue 1, 9800-429 Urzelina, São Jorge, Açores</p>
-          <p>Phone: +31 654234459</p>
-          <p>+351 964 643 610</p>
-
-          <div class="social-media">
-            <a href="https://www.facebook.com/pieter.adriaans" aria-label="Facebook Pieter Adriaans" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.youtube.com/@pieter_adriaans" aria-label="YouTube Pieter Adriaans" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Pieter Adriaans. All rights reserved.</p>
-        <p>Publicity photographs on this website are by <a href="https://www.facebook.com/jorge.blayergois"
-            target="_blank" rel="noopener noreferrer">Jorge Blayer Gois</a>.</p>
-      </div>
-    </footer>
-  </div>
-  <div id="cookie-banner" class="cookie-banner" hidden>
-    <div class="cookie-banner__inner">
-      <div class="cookie-banner__content">
-        <h2>Cookies & Analytics</h2>
-        <p>
-          We use analytics cookies to understand how visitors use this website and to improve the experience.
-          You can accept or reject analytics tracking.
-        </p>
-      </div>
-
-      <div class="cookie-banner__actions">
-        <button type="button" class="button accent" id="cookie-accept">Accept analytics</button>
-        <button type="button" class="button accent" id="cookie-reject">Reject</button>
-      </div>
-    </div>
-  </div>
-</body>
-<!-- Cookie Banner -->
-<div id="cookie-banner" class="cookie-banner" hidden>
-  <div class="cookie-banner__inner">
-    <div class="cookie-banner__content">
-      <h2>Cookies & Analytics</h2>
-      <p>
-        We use analytics cookies to understand how visitors use this website and improve the experience.
-      </p>
-    </div>
-    <div class="cookie-banner__actions">
-      <button class="button primary" id="cookie-accept">Accept</button>
-      <button class="button secondary" id="cookie-reject">Reject</button>
-    </div>
-  </div>
-</div>
 @endsection

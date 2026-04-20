@@ -121,9 +121,9 @@
         <div class="footer-section links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#art">Gallery</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+            <li><a href="/#art">Gallery</a></li>
             <li>
               <a href="#" onclick="openCookieSettings(); return false;">Cookie settings</a>
             </li>

@@ -95,7 +95,7 @@
           </p>
 
           <p>
-            <a href="joao-cagarro.html" class="button primary">Discover João Cagarro</a>
+            <a href="{{ route('joao-cagarro') }}" class="button primary">Discover João Cagarro</a>
           </p>
         </article>
       </section>
