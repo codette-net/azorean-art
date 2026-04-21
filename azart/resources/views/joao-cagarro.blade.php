@@ -9,9 +9,9 @@
         <h1 class="h1-logo">Azorean<span class="sr-only">Art</span><span>r</span><span>t</span></h1>
       </header>
        <div class="lang-switch">
-            <a href="joao-cagarro.html" class="lang-link active" aria-label="Switch to English version" title="Switch to English version">EN</a>
+            <a href="{{ route('joao-cagarro') }}" class="lang-link active" aria-label="Switch to English version" title="Switch to English version">EN</a>
             <span class="lang-separator">|</span>
-            <a href="joao-cagarro-pt.html" class="lang-link" aria-label="Mudar para a versão em português" title="Mudar para a versão em português">PT</a>
+            <a href="{{ route('joao-cagarro.pt') }}" class="lang-link" aria-label="Mudar para a versão em português" title="Mudar para a versão em português">PT</a>
           </div>
       <section class="hero-joao gradient-darkpurple-overlay">
         <header class="hero-content wrapper">

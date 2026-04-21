@@ -17,3 +17,7 @@ Route::get('/contact', function () {
 Route::get('/joao-cagarro', function () {
     return view('joao-cagarro');
 })->name('joao-cagarro');
+
+Route::get('/joao-cagarro-pt', function () {
+    return view('joao-cagarro-pt');
+})->name('joao-cagarro.pt');
