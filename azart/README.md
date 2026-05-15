@@ -12,4 +12,3 @@ php artisan filament:install --panels
 
 php artisan make:filament-user
 
-php artisan vendor:publish --tag=filament-config
