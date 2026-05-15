@@ -41,6 +41,7 @@ fields:
 * title
 * language (`en`, `pt`)
 * format (`softcover`)
+* weight_grams
 * price_cents
 * is_active
 
@@ -73,6 +74,8 @@ fields:
 
 * variant_id nullable
 * shipping_zone_id
+* weight_from
+* weight_to
 * amount_cents
 * notes
 
@@ -85,7 +88,7 @@ fields:
 * order_number
 * status (`pending`, `paid`, `cancelled`, `fulfilled`)
 * payment_status (`pending`, `paid`, `failed`, `refunded`)
-* payment_provider (`stripe` / `mollie`)
+* payment_method (`stripe` / `mollie`)
 * payment_reference
 * customer_name
 * customer_email
@@ -94,7 +97,7 @@ fields:
 * shipping_address_line_1
 * shipping_address_line_2 nullable
 * shipping_postal_code
-* shipping_city
+* shipping_city (merge with state)
 * shipping_country
 * shipping_zone_id
 * subtotal_cents
