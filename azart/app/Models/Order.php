@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany; 
-use Illuminate\Database\Eloquent\Relations\BelongsTo; 
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class Order extends Model
@@ -13,8 +13,8 @@ class Order extends Model
         'order_number',
         'status', // e.g., 'pending', 'paid', 'fulfilled', 'cancelled'
         'payment_status',
-        'payment_method', // e.g., 'mollie', 'cash' 
-        'payment_refererence', // e.g., Mollie payment ID
+        'payment_method', // e.g., 'mollie', 'cash'
+        'payment_reference', // e.g., Mollie payment ID
         'customer_name',
         'customer_email',
         'customer_phone',
