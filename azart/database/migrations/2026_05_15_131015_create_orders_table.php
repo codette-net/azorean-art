@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->integer('order_number')->unique();
-            $table->string('status')->default('pending');
-            $table->string('payment_status')->default('pending');
+//            $table->string('status')->default('pending');
+            $table->enum('status', ['pending', 'processing', 'shipped', 'delivered', 'cancelled'])->default('pending');
+//            $table->string('payment_status')->default('pending');
+            $table->enum('payment_status', ['pending', 'paid', 'failed'])->default('pending');
             $table->string('payment_method')->default('mollie');
             $table->string('payment_reference')->nullable();
             $table->string('customer_name');
