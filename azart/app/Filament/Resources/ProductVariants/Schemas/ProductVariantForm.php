@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ProductVariants\Schemas;
 
 use App\Enums\ProductFormatEnum;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -19,9 +20,11 @@ class ProductVariantForm
                 Group::make()->schema([
                     Section::make('Product Variant Details')
                         ->schema([
-                            TextInput::make('product_id')
-                                ->numeric()
-                                ->default(0),
+                            Select::make('product_id')
+                                ->relationship('product', 'title')
+                                ->required()
+                                ->searchable()
+                                ->preload(),
                             TextInput::make('title')
                                 ->required(),
                             TextInput::make('language')
@@ -50,7 +53,7 @@ class ProductVariantForm
                             Toggle::make('is_active')
                                 ->label('Visible')
                                 ->helperText('If unchecked, the product will not be visible in the store'),
-                            TextInput::make('published_at')
+                            DatePicker::make('published_at')
                                 ->label('Available from')
                                 ->default(now()),
                         ])->columns(2),

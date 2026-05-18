@@ -18,8 +18,8 @@ class ProductVariantsTable
     {
         return $table
             ->columns([
-                TextColumn::make('product_id')
-                    ->numeric()
+                TextColumn::make('product.title')
+                    ->label('Product')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('sku')
@@ -32,7 +32,8 @@ class ProductVariantsTable
                 TextColumn::make('format')
                     ->searchable(),
                 TextColumn::make('price_cents')
-                    ->numeric()
+                    ->label('Price')
+                    ->money('EUR', divideBy: 100)
                     ->sortable(),
                 IconColumn::make('is_active')
                     ->toggleable(isToggledHiddenByDefault: true)

@@ -40,27 +40,27 @@ class ProductForm
                                 MarkDownEditor::make('description')
                                     ->columnSpanFull(),
                             ])->columns(2),
-                        Section::make('Pricing & Stock')
-                            ->schema([
-                                TextInput::make('sku')
-                                    ->label('Stock Keeping Unit'),
-                                TextInput::make('price_cents')
-                                    ->numeric()
-                                    ->required(),
-//                                    ->rules('regex:/^\d{1,6}(\.\d{0,2})?$/'),
-                                TextInput::make('stock')
-                                    ->default(0)
-                                    ->numeric()
-                                    ->minValue(0)
-                                ,
-                                Select::make('format')
-                                    ->options([
-                                        'softcover' => ProductFormatEnum::SOFTCOVER->value,
-                                        'hardcover' => ProductFormatEnum::HARDCOVER->value,
-                                        'ebook' => ProductFormatEnum::EBOOK->value,
-                                    ])->default('softcover'),
-
-                            ])->columns(2),
+//                        Section::make('Pricing & Stock')
+//                            ->schema([
+//                                TextInput::make('sku')
+//                                    ->label('Stock Keeping Unit'),
+//                                TextInput::make('price_cents')
+//                                    ->numeric()
+//                                    ->required(),
+////                                    ->rules('regex:/^\d{1,6}(\.\d{0,2})?$/'),
+//                                TextInput::make('stock')
+//                                    ->default(0)
+//                                    ->numeric()
+//                                    ->minValue(0)
+//                                ,
+//                                Select::make('format')
+//                                    ->options([
+//                                        'softcover' => ProductFormatEnum::SOFTCOVER->value,
+//                                        'hardcover' => ProductFormatEnum::HARDCOVER->value,
+//                                        'ebook' => ProductFormatEnum::EBOOK->value,
+//                                    ])->default('softcover'),
+//
+//                            ])->columns(2),
                     ]),
                 Group::make()
                     ->schema([
