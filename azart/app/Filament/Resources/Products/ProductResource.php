@@ -13,6 +13,9 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class ProductResource extends Resource
 {
@@ -23,6 +26,35 @@ class ProductResource extends Resource
     protected static string|null|\UnitEnum $navigationGroup = 'Shop';
 
     protected static ?int $navigationSort = 0;
+
+    protected static ?string $recordTitleAttribute = 'title';
+
+    protected static int $globalSearchResultsLimit = 20;
+
+    public static function getGloballySearchableAttributes(): array
+    {
+        return [
+            'title',
+            'slug',
+            'description',
+            'variants.title',
+            'variants.sku',
+        ];
+    }
+
+    public static function getGlobalSearchEloquentQuery(): Builder
+    {
+        return parent::getGlobalSearchEloquentQuery()
+            ->with(['variants']);
+    }
+
+    public static function getGlobalSearchResultDetails(Model $record): array
+    {
+        return [
+            'Slug' => $record->slug,
+            'Variants' => $record->variants->pluck('title')->join(', '),
+        ];
+    }
 
     public static function form(Schema $schema): Schema
     {

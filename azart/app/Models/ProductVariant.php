@@ -21,7 +21,7 @@ class ProductVariant extends Model
         'is_active',
     ];
 
-    public function product()
+    public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }

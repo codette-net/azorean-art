@@ -22,7 +22,7 @@ class ProductsTable
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('variant.title')
+                TextColumn::make('variants.title')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('slug')
