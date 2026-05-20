@@ -38,7 +38,7 @@ class ProductVariantForm
                         ])->columns(2),
                 ]),
                 Group::make()->schema([
-                    Section::make('Pricing & Stock')
+                    Section::make('Pricing & inventory')
                         ->schema([
                             TextInput::make('sku')
                                 ->label('Stock Keeping Unit')
